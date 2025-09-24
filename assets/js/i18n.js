@@ -11,6 +11,19 @@ const enTranslations = {
   }
 }
 
+const esTranslations = {
+  "welcome": "Bem-vindo",
+  "greeting": "Olá, {{name}}!",
+  "pluralExample_one": "Você tem {{count}} notificação.",
+  "pluralExample_other": "Você tem {{count}} notificações.",
+  "navigation": {
+    "home": "Inicio",
+    "about": "Sobre",
+    "courses": "Cursos",
+    "contact": "Contato"
+  }
+}
+
 const ptTranslations = {
   "welcome": "Bem-vindo",
   "greeting": "Olá, {{name}}!",
@@ -24,6 +37,16 @@ const ptTranslations = {
   }
 }
 
+function translateAllElements() {
+  var elements = document.querySelectorAll('[data-translate]');
+  elements.forEach(function(el) {
+    var key = el.getAttribute('data-translate');
+    if (key) {
+      el.textContent = i18next.t(key);
+    }
+  });
+}
+
 i18next.init({
   lng: 'en', // if you're using a language detector, do not define the lng option
   debug: true,
@@ -32,18 +55,10 @@ i18next.init({
       translation: enTranslations
     },
     es: {
-      translation: {
-        "welcome": "Bienvenido",
-        "greeting": "¡Hola, {{name}}!",
-        "pluralExample_one": "Tienes {{count}} notificación.",
-        "pluralExample_other": "Tienes {{count}} notificaciones.",
-        "navigation": {
-          "home": "Inicio",
-          "about": "Acerca de",
-          "courses": "Cursos",
-          "contact": "Contacto"
-        }
-      }
+      translation: esTranslations
+    },
+    pt: {
+      translation: ptTranslations
     }
   }
 });
