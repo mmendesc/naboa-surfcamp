@@ -117,6 +117,13 @@ const ptTranslations = {
   'testimonials': {
     'subheader': 'comentarios',
     'header': 'O que falam sobre a gente'
+  },
+  'kiteSection': {
+    'subheader': 'Praticante de Kitesurf?',
+    'header': 'Venha aprender a <br> Surfar Também',
+    'sideHeader': 'Aprenda mais um esporte',
+    'text': 'Se você já pratica kitesurf, venha aprender a surfar conosco em Taíba, um dos melhores picos do Brasil.',
+    'button': 'Saiba mais'
   }
 }
 
