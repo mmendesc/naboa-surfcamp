@@ -42,7 +42,23 @@ const ptTranslations = {
   "navigation": {
     "home": "Inicio",
     "about": "Sobre",
-    "courses": "Cursos",
+    "stay": {
+      "title": "Estadia",
+      "casamar": "Casa Mar",
+      "taiba": "Taíba"
+    },
+    "packages": {
+      "title": "Pacotes",
+      "surf": "Surf",
+      "rental": "Aluguel",
+      "images": "Imagens"
+    },
+    'about': {
+      'title': 'Sobre'
+    },
+    'store': {
+      'title': 'Loja'
+    },
     "contact": "Contato"
   },
   'sliderCarousel': {
@@ -116,9 +132,29 @@ function translateAllElements() {
   });
 }
 
-// Function to change language
+// Helpers to persist language selection in browser
+function getStoredLanguage() {
+  try {
+    return localStorage.getItem('siteLanguage');
+  } catch (e) {
+    return null;
+  }
+}
+
+function setStoredLanguage(lang) {
+  try {
+    localStorage.setItem('siteLanguage', lang);
+  } catch (e) {
+    // ignore write errors (private mode)
+  }
+}
+
+// Function to change language and persist selection
 function changeLanguage(language) {
-  return i18next.changeLanguage(language);
+  // i18next.changeLanguage may return a promise or accept a callback depending on version
+  return Promise.resolve(i18next.changeLanguage(language)).then(function() {
+    setStoredLanguage(language);
+  });
 }
 
 // Add onclick event to brasil-flag to change language to 'pt' and update translations
@@ -141,8 +177,11 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+// Determine initial language from storage or default to 'pt'
+var initialLang = getStoredLanguage() || 'pt';
+
 i18next.init({
-  lng: 'en', // if you're using a language detector, do not define the lng option
+  lng: initialLang, // if you're using a language detector, do not define the lng option
   debug: true,
   resources: {
     en: {
@@ -155,6 +194,11 @@ i18next.init({
       translation: ptTranslations
     }
   }
+}).then(function() {
+  // i18next is initialized, populate the page translations
+  translateAllElements();
+}).catch(function(err) {
+  console.error('i18next init failed:', err);
 });
 
 
