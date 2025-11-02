@@ -124,6 +124,20 @@ const ptTranslations = {
     'sideHeader': 'Aprenda mais um esporte',
     'text': 'Se você já pratica kitesurf, venha aprender a surfar conosco em Taíba, um dos melhores picos do Brasil.',
     'button': 'Saiba mais'
+  },
+  'featuresList': {
+    'feature1': 'Onda o ano todo',
+    'feature2': 'Instrutores experientes',
+    'feature3': 'Equipamento de qualidade',
+  },
+  'footer': {
+    'about': 'Sobre Nós',
+    'explore': {
+      'title': 'Explorar',
+      'packages': 'Pacotes',
+      'stay': 'Estadia',
+      'store': 'Loja'
+    },
   }
 }
 
