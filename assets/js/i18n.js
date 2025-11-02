@@ -108,6 +108,39 @@ const ptTranslations = {
     'header': 'Pacotes mais<br> Procurados',
     'text': 'Todos nosso serviços e pacotes estao listados abaixo, escolha de acordo com seu nivel'
   },
+  'packages': {
+    'package1': {
+      'label': 'Iniciante',
+      'title': 'Iniciante',
+      'brief': 'Pacote para quem nunca surfou antes, inclui aula e equipamento'
+    },
+    'package2': {
+      'label': 'Intermediário',
+      'title': 'Intermediário',
+      'brief': 'Pacote para quem já tem alguma experiência, inclui aula e equipamento'
+    },
+    'package3': {
+      'label': 'Avançado',
+      'title': 'Avançado',
+      'brief': 'Pacote para surfistas experientes, inclui apenas equipamento'
+    },
+    'package4': {
+      'label': 'Equipamento',
+      'title': 'Aluguel de Pranchas',
+      'brief': 'Alugue pranchas com a gente'
+    },
+    'package5': {
+      'label': 'Imersão',
+      'title': 'Imersão de Surf',
+      'brief': 'Final de semana de imersao com muito surf, comida e experiencias'
+    },
+    'package6': {
+      'label': 'Filmagem',
+      'title': 'Captação de Imagens',
+      'brief': 'Grave suas sessoes de surf para video analisar'
+    },
+    'cta': 'Saiba mais'
+  },
   'taibaSection': {
     'subheader': 'conheça mais sobre nosso local',
     'header': 'Por que a Taiba?',
