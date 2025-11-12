@@ -127,7 +127,7 @@ const ptTranslations = {
     'package4': {
       'label': 'Equipamento',
       'title': 'Aluguel de Pranchas',
-      'brief': 'Alugue pranchas com a gente'
+      'brief': 'Alugue pranchas com a gente, temos uma variedade de modelos'
     },
     'package5': {
       'label': 'Imersão',
@@ -171,6 +171,7 @@ const ptTranslations = {
       'stay': 'Estadia',
       'store': 'Loja'
     },
+    'follow': 'Siga nossas redes'
   }
 }
 
