@@ -1,180 +1,22 @@
-const enTranslations = {
-  "navigation": {
-    "home": "Home",
-    "about": "About",
-    "courses": "Courses",
-    "contact": "Contact"
-  },
-  'sliderCarousel': {
-    'slider1': {
-      'subtitle': 'Fique na boa',
-      'title': 'Venha Surfar com a gente',
-      'cta': 'Pacotes'
-    },
-    'slider2': {
-      'subtitle': 'Nao importa seu nivel',
-      'title': 'Do iniciante ao avançado',
-      'cta': 'Pacotes'
-    },
-    'slider3': {
-      'subtitle': 'Um paraiso',
-      'title': 'Venha Conhecer a taiba',
-      'cta': 'Taiba'
-    }
-  }
-}
+// Languages available and loader for JSON locale files
+var availableLangs = ['en', 'es', 'pt'];
 
-const esTranslations = {
-  "welcome": "Bem-vindo",
-  "greeting": "Olá, {{name}}!",
-  "pluralExample_one": "Você tem {{count}} notificação.",
-  "pluralExample_other": "Você tem {{count}} notificações.",
-  "navigation": {
-    "home": "Comienzo",
-    "about": "Sobre",
-    "courses": "Cursos",
-    "contact": "Contato"
-  }
+function loadTranslations() {
+  return Promise.all(availableLangs.map(function(lang) {
+    return fetch('/assets/locales/' + lang + '.json').then(function(res) {
+      if (!res.ok) throw new Error('Failed to load ' + lang + ' translations');
+      return res.json();
+    }).then(function(json) {
+      return { lang: lang, json: json };
+    });
+  })).then(function(arr) {
+    var resources = {};
+    arr.forEach(function(item) {
+      resources[item.lang] = { translation: item.json };
+    });
+    return resources;
+  });
 }
-
-const ptTranslations = {
-  "welcome": "Bem-vindo",
-  "navigation": {
-    "home": "Inicio",
-    "about": "Sobre",
-    "stay": {
-      "title": "Estadia",
-      "casamar": "Casa Mar",
-      "taiba": "Taíba"
-    },
-    "packages": {
-      "title": "Pacotes",
-      "surf": "Surf",
-      "rental": "Aluguel",
-      "images": "Imagens"
-    },
-    'about': {
-      'title': 'Sobre'
-    },
-    'store': {
-      'title': 'Loja'
-    },
-    "contact": "Contato"
-  },
-  'sliderCarousel': {
-    'slider1': {
-      'subtitle': 'Fique na boa',
-      'title': 'Venha Surfar com a gente',
-      'cta': 'Pacotes'
-    },
-    'slider2': {
-      'subtitle': 'Nao importa seu nivel',
-      'title': 'Do iniciante ao avançado',
-      'cta': 'Pacotes'
-    },
-    'slider3': {
-      'subtitle': 'Um paraiso',
-      'title': 'Venha Conhecer a taiba',
-      'cta': 'Taiba'
-    }
-  },
-  'ctaTwo': {
-    'text': 'Oferecemos serviço personalizado e com segurança',
-    'button': 'Comece agora'
-  },
-  'ourServices': {
-    'floatedText': 'SERVIÇOS',
-    'subtitle': "NOSSOS SERVIÇOS",
-    'title': 'O QUE OFERECEMOS',
-    'surfLessons': {
-      'header': 'Aulas de <br> Surf',
-      'text': 'Oferecemos aulas de surf'
-    },
-    'rentalBoards': {
-      'header': 'Aluguel de <br> Pranchas',
-      'text': 'Alugue pranchas com a gente'
-    },
-    'film': {
-      'header': 'Capitação de <br> Imagens',
-      'text': 'Grave suas sessoes de surf para video analisar'
-    },
-    'retreats': {
-      'header': 'Imersões de<br> Surf',
-      'text': 'Final de semana de imersao com muito surf, comida e experiencias'
-    }
-  },
-  'coursesList': {
-    'subheader': 'Todos pacotes',
-    'header': 'Pacotes mais<br> Procurados',
-    'text': 'Todos nosso serviços e pacotes estao listados abaixo, escolha de acordo com seu nivel'
-  },
-  'packages': {
-    'package1': {
-      'label': 'Iniciante',
-      'title': 'Iniciante',
-      'brief': 'Pacote para quem nunca surfou antes, inclui aula e equipamento'
-    },
-    'package2': {
-      'label': 'Intermediário',
-      'title': 'Intermediário',
-      'brief': 'Pacote para quem já tem alguma experiência, inclui aula e equipamento'
-    },
-    'package3': {
-      'label': 'Avançado',
-      'title': 'Avançado',
-      'brief': 'Pacote para surfistas experientes, inclui apenas equipamento'
-    },
-    'package4': {
-      'label': 'Equipamento',
-      'title': 'Aluguel de Pranchas',
-      'brief': 'Alugue pranchas com a gente, temos uma variedade de modelos'
-    },
-    'package5': {
-      'label': 'Imersão',
-      'title': 'Imersão de Surf',
-      'brief': 'Final de semana de imersao com muito surf, comida e experiencias'
-    },
-    'package6': {
-      'label': 'Filmagem',
-      'title': 'Captação de Imagens',
-      'brief': 'Grave suas sessoes de surf para video analisar'
-    },
-    'cta': 'Saiba mais'
-  },
-  'taibaSection': {
-    'subheader': 'conheça mais sobre nosso local',
-    'header': 'Por que a Taiba?',
-    'text': 'Taiba é um lugar tranquilo e com altas ondas',
-    'button': 'Reserve com a gente'
-  },
-  'testimonials': {
-    'subheader': 'comentarios',
-    'header': 'O que falam sobre a gente'
-  },
-  'kiteSection': {
-    'subheader': 'Praticante de Kitesurf?',
-    'header': 'Venha aprender a <br> Surfar Também',
-    'sideHeader': 'Aprenda mais um esporte',
-    'text': 'Se você já pratica kitesurf, venha aprender a surfar conosco em Taíba, um dos melhores picos do Brasil.',
-    'button': 'Saiba mais'
-  },
-  'featuresList': {
-    'feature1': 'Onda o ano todo',
-    'feature2': 'Instrutores experientes',
-    'feature3': 'Equipamento de qualidade',
-  },
-  'footer': {
-    'about': 'Sobre Nós',
-    'explore': {
-      'title': 'Explorar',
-      'packages': 'Pacotes',
-      'stay': 'Estadia',
-      'store': 'Loja'
-    },
-    'follow': 'Siga nossas redes'
-  }
-}
-
 function translateAllElements() {
   var elements = document.querySelectorAll('[data-translate]');
   elements.forEach(function(el) {
@@ -235,20 +77,13 @@ document.addEventListener('DOMContentLoaded', function() {
 // Determine initial language from storage or default to 'pt'
 var initialLang = getStoredLanguage() || 'pt';
 
-i18next.init({
-  lng: initialLang, // if you're using a language detector, do not define the lng option
-  debug: true,
-  resources: {
-    en: {
-      translation: enTranslations
-    },
-    es: {
-      translation: esTranslations
-    },
-    pt: {
-      translation: ptTranslations
-    }
-  }
+// Load translations from JSON files then initialize i18next
+loadTranslations().then(function(resources) {
+  return i18next.init({
+    lng: initialLang,
+    debug: true,
+    resources: resources
+  });
 }).then(function() {
   // i18next is initialized, populate the page translations
   translateAllElements();

@@ -1,0 +1,12 @@
+{
+  "welcome": "Bienvenido",
+  "greeting": "Hola, {{name}}!",
+  "pluralExample_one": "Tienes {{count}} notificación.",
+  "pluralExample_other": "Tienes {{count}} notificaciones.",
+  "navigation": {
+    "home": "Inicio",
+    "about": "Sobre",
+    "courses": "Cursos",
+    "contact": "Contacto"
+  }
+}
