@@ -201,13 +201,30 @@
 
     if ($('.video-popup').length) {
         $('.video-popup').magnificPopup({
-            disableOn: 700,
+            // always enable the popup (do not disable on small viewports)
+            disableOn: false,
             type: 'iframe',
             mainClass: 'mfp-fade',
             removalDelay: 160,
             preloader: true,
 
             fixedContentPos: false
+        });
+        // Add a fallback: if the popup doesn't open (e.g. blocked), open the video in a new tab
+        $(document).on('click', '.video-popup', function (e) {
+            var href = $(this).attr('href');
+            // start a timer; if Magnific Popup doesn't open within this time, open in new tab
+            var fallbackTimer = setTimeout(function () {
+                if ($('.mfp-container').length === 0) {
+                    window.open(href, '_blank');
+                }
+            }, 800);
+
+            // when Magnific Popup opens, it triggers the 'mfpOpen' event on document
+            // clear the fallback timer so we don't open the new tab
+            $(document).one('mfpOpen', function () {
+                clearTimeout(fallbackTimer);
+            });
         });
     }
     if ($('[data-toggle="tooltip"]').length) {
