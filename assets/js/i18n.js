@@ -1,6 +1,10 @@
 // Languages available and loader for JSON locale files
 var availableLangs = ['en', 'es', 'pt'];
 
+// Tracks readiness so we can apply translations whether partials load
+// before or after i18next initializes.
+var i18nReady = false;
+var partialsReady = false;
 function loadTranslations() {
   return Promise.all(availableLangs.map(function(lang) {
     return fetch('/assets/locales/' + lang + '.json').then(function(res) {
@@ -17,6 +21,7 @@ function loadTranslations() {
     return resources;
   });
 }
+
 function translateAllElements() {
   var elements = document.querySelectorAll('[data-translate]');
   elements.forEach(function(el) {
@@ -108,8 +113,8 @@ function changeLanguage(language) {
   });
 }
 
-// Add onclick event to brasil-flag to change language to 'pt' and update translations
-document.addEventListener('DOMContentLoaded', function() {
+// Bind click handlers for flag elements (safe to call multiple times).
+function bindFlagHandlers() {
   var flagConfigs = [
     { id: 'brasil-flag', lang: 'pt' },
     { id: 'usa-flag', lang: 'en' },
@@ -120,12 +125,29 @@ document.addEventListener('DOMContentLoaded', function() {
     if (el) {
       el.onclick = function() {
         changeLanguage(cfg.lang).then(function() {
+          // After language change, update visible text and dynamic widgets
           translateAllElements();
           renderPackages();
         });
       };
     }
   });
+}
+
+// Attempt to bind on DOMContentLoaded and also when partials are injected.
+document.addEventListener('DOMContentLoaded', function() {
+  bindFlagHandlers();
+});
+
+// When partials are injected, re-apply translations (if i18n ready) and bind handlers.
+document.addEventListener('partialsLoaded', function() {
+  partialsReady = true;
+  // Bind handlers for elements that live inside injected partials
+  bindFlagHandlers();
+  if (i18nReady) {
+    translateAllElements();
+    renderPackages();
+  }
 });
 
 
@@ -140,9 +162,15 @@ loadTranslations().then(function(resources) {
     resources: resources
   });
 }).then(function() {
-  // i18next is initialized, populate the page translations
+  // i18next is initialized
+  i18nReady = true;
+  // Populate the page translations. If partials were injected already,
+  // this will translate them as well. Otherwise, translations will be
+  // applied after 'partialsLoaded' fires.
   translateAllElements();
   renderPackages();
+  // Bind flag handlers in case header/footer were inline in the page
+  bindFlagHandlers();
 }).catch(function(err) {
   console.error('i18next init failed:', err);
 });
