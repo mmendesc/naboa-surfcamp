@@ -1,0 +1,56 @@
+{
+  "en": {
+    "courseDetails": {
+      "pageTitle": "Course Details",
+      "detailLabel": "Detail",
+      "priceLabel": "$89",
+      "priceText": "Dive price",
+      "dives": "2",
+      "divesText": "Dives only",
+      "days": "4",
+      "daysText": "day course",
+      "headerTitle": "Extended Range",
+      "paragraph1": "Need something changed or is there something not quite working the way you envisaged? Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "tipsHeader": "Diving Tips",
+      "tipsPara1": "Neque porro est qui dolorem ipsum quia quaed inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+      "tipsPara2": "When an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "cta": "Contact for more details"
+    }
+  },
+  "es": {
+    "courseDetails": {
+      "pageTitle": "Detalles del Curso",
+      "detailLabel": "Detalle",
+      "priceLabel": "$89",
+      "priceText": "Precio de inmersión",
+      "dives": "2",
+      "divesText": "Solo inmersiones",
+      "days": "4",
+      "daysText": "curso de días",
+      "headerTitle": "Alcance Extendido",
+      "paragraph1": "¿Necesita algo cambiado o hay algo que no funciona como imaginaba? Lorem Ipsum es simplemente texto de relleno de la industria de la tipografía.",
+      "tipsHeader": "Consejos de Buceo",
+      "tipsPara1": "Neque porro est qui dolorem ipsum quia quaed inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+      "tipsPara2": "Cuando un impresor desconocido tomó una galera de tipo y la mezcló para hacer un libro de muestras.",
+      "cta": "Contacta para más detalles"
+    }
+  },
+  "pt": {
+    "courseDetails": {
+      "pageTitle": "Detalhes do Pacote",
+      "detailLabel": "Detalhe",
+      "priceLabel": "$89",
+      "priceText": "Preço do mergulho",
+      "dives": "2",
+      "divesText": "Apenas mergulhos",
+      "days": "4",
+      "daysText": "curso de dias",
+      "headerTitle": "Alcance Estendido",
+      "paragraph1": "Precisa de algo alterado ou há algo que não está funcionando como imaginou? Lorem Ipsum é simplesmente texto fictício da indústria tipográfica.",
+      "tipsHeader": "Dicas de Mergulho",
+      "tipsPara1": "Neque porro est qui dolorem ipsum quia quaed inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+      "tipsPara2": "Quando um impressor desconhecido pegou uma galera de tipos e a embaralhou para fazer um livro de amostras.",
+      "cta": "Contacte para mais detalhes"
+    }
+  }
+}

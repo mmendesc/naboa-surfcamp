@@ -6,6 +6,7 @@ var availableLangs = ['en', 'es', 'pt'];
 var i18nReady = false;
 var partialsReady = false;
 function loadTranslations() {
+  // Load base locale files, then (optionally) load a per-service translations file
   return Promise.all(availableLangs.map(function(lang) {
     return fetch('/assets/locales/' + lang + '.json').then(function(res) {
       if (!res.ok) throw new Error('Failed to load ' + lang + ' translations');
@@ -18,8 +19,52 @@ function loadTranslations() {
     arr.forEach(function(item) {
       resources[item.lang] = { translation: item.json };
     });
+
+    // If there's a `service` query param, try to load per-service translations
+    try {
+      var params = new URLSearchParams(window.location.search);
+      var serviceName = params.get('service');
+      if (serviceName) {
+        var servicePath = '/assets/locales/services/' + encodeURIComponent(serviceName) + '.json';
+        return fetch(servicePath, { cache: 'no-cache' }).then(function(res) {
+          if (!res.ok) {
+            // Service file missing - resolve with base resources
+            return resources;
+          }
+          return res.json().then(function(serviceJson) {
+            // serviceJson is expected to be an object with language keys: { en: {...}, es: {...}, pt: {...} }
+            Object.keys(serviceJson || {}).forEach(function(langKey) {
+              if (!resources[langKey]) resources[langKey] = { translation: {} };
+              // Deep merge service translations into base translations for that language
+              resources[langKey].translation = deepMerge(resources[langKey].translation || {}, serviceJson[langKey] || {});
+            });
+            return resources;
+          });
+        }).catch(function(e) {
+          console.warn('Failed to load service translations for', serviceName, e);
+          return resources;
+        });
+      }
+    } catch (e) {
+      // ignore URL parsing errors
+    }
+
     return resources;
   });
+}
+
+// Deep merge helper (simple recursive merge for plain objects)
+function deepMerge(target, source) {
+  var out = Object.assign({}, target);
+  Object.keys(source || {}).forEach(function(k) {
+    var srcVal = source[k];
+    if (srcVal && typeof srcVal === 'object' && !Array.isArray(srcVal)) {
+      out[k] = deepMerge(out[k] || {}, srcVal);
+    } else {
+      out[k] = srcVal;
+    }
+  });
+  return out;
 }
 
 function translateAllElements() {
