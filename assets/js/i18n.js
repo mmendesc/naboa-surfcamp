@@ -29,6 +29,60 @@ function translateAllElements() {
   });
 }
 
+// Render the packages carousel items based on translations
+function renderPackages() {
+  try {
+    var pkgObj = i18next.t('packages', { returnObjects: true });
+    if (!pkgObj) return;
+
+    var container = document.querySelector('.course-one__carousel.thm__owl-carousel');
+    if (!container) return;
+
+    // collect package keys like package1, package2...
+    var packageKeys = Object.keys(pkgObj).filter(function(k) { return /^package\d+$/.test(k); });
+    packageKeys.sort(function(a, b) {
+      return parseInt(a.replace('package', ''), 10) - parseInt(b.replace('package', ''), 10);
+    });
+
+    var ctaText = pkgObj.cta || i18next.t('packages.cta');
+
+    var html = '';
+    packageKeys.forEach(function(key, idx) {
+      var pkg = pkgObj[key];
+      if (!pkg) return;
+      var imgIndex = (idx % 6) + 1; // cycle through available course images
+      var imgSrc = 'assets/images/courses/course-1-' + imgIndex + '.jpg';
+
+      html += '<div class="item">\n';
+      html += '  <div class="course-one__single">\n';
+      html += '    <div class="course-one__image">\n';
+      html += '      <a href="course-details.html" class="course-one__cat">' + escapeHtml(pkg.label || '') + '</a>\n';
+      html += '      <div class="course-one__image-inner">\n';
+      html += '        <img src="' + imgSrc + '" alt="">\n';
+      html += '        <a href="course-details.html"><i class="scubo-icon-plus-symbol"></i></a>\n';
+      html += '      </div>\n';
+      html += '    </div>\n';
+      html += '    <div class="course-one__content hvr-sweep-to-bottom">\n';
+      html += '      <h3><a href="course-details.html">' + escapeHtml(pkg.title || '') + '</a></h3>\n';
+      html += '      <p>' + escapeHtml(pkg.brief || '') + '</p>\n';
+      html += '    </div>\n';
+      html += '    <a href="contact.html" class="course-one__book-link">' + escapeHtml(ctaText || 'Book this course') + '</a>\n';
+      html += '  </div>\n';
+      html += '</div>\n';
+    });
+
+    container.innerHTML = html;
+  } catch (e) {
+    console.error('renderPackages error', e);
+  }
+}
+
+// small helper to avoid injecting unescaped text into HTML
+function escapeHtml(str) {
+  if (!str && str !== 0) return '';
+  return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#039;');
+}
+
 // Helpers to persist language selection in browser
 function getStoredLanguage() {
   try {
@@ -67,6 +121,7 @@ document.addEventListener('DOMContentLoaded', function() {
       el.onclick = function() {
         changeLanguage(cfg.lang).then(function() {
           translateAllElements();
+          renderPackages();
         });
       };
     }
@@ -87,6 +142,7 @@ loadTranslations().then(function(resources) {
 }).then(function() {
   // i18next is initialized, populate the page translations
   translateAllElements();
+  renderPackages();
 }).catch(function(err) {
   console.error('i18next init failed:', err);
 });
