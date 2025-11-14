@@ -37,18 +37,23 @@
   },
   "pt": {
     "courseDetails": {
-      "pageTitle": "Detalhes do Pacote",
-      "detailLabel": "Detalhe",
-      "priceLabel": "$89",
-      "priceText": "Preço do mergulho",
-      "dives": "2",
-      "divesText": "Apenas mergulhos",
-      "days": "4",
-      "daysText": "curso de dias",
-      "headerTitle": "Alcance Estendido",
-      "paragraph1": "Precisa de algo alterado ou há algo que não está funcionando como imaginou? Lorem Ipsum é simplesmente texto fictício da indústria tipográfica.",
-      "tipsHeader": "Dicas de Mergulho",
-      "tipsPara1": "Neque porro est qui dolorem ipsum quia quaed inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+      "breadcrumbs": {
+        "home": "Início",
+        "courses": "Serviços",
+        "current": "Aula de Surf Avulsa"
+      },
+      "pageTitle": "Aula de Surf Avulsa",
+      "detailLabel": "INFO",
+      "priceLabel": "R$99",
+      "priceText": "Aula",
+      "dives": "1",
+      "divesText": "Hora",
+      "days": "",
+      "daysText": "",
+      "headerTitle": "Detalhes",
+      "paragraph1": ["teste1", "teste2", "teste3"],
+      "tipsHeader": "Recomendações",
+      "tipsPara1": "- Nós provemos todo o material necessario, mas caso tenha prancha de surf propria, traga junto. <br> - Use roupas confortaveis e protetor solar. <br> - Chegue 15 minutos antes para se preparar.",
       "tipsPara2": "Quando um impressor desconhecido pegou uma galera de tipos e a embaralhou para fazer um livro de amostras.",
       "cta": "Contacte para mais detalhes"
     }

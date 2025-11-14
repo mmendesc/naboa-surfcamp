@@ -102,6 +102,7 @@ function renderPackages() {
       if (!pkg) return;
       var imgIndex = (idx % 6) + 1; // cycle through available course images
       var imgSrc = 'assets/images/courses/course-1-' + imgIndex + '.jpg';
+      var ctaSrc = 'course-details.html?service=' + pkg.serviceName;
 
       html += '<div class="item">\n';
       html += '  <div class="course-one__single">\n';
@@ -116,7 +117,7 @@ function renderPackages() {
       html += '      <h3><a href="course-details.html">' + escapeHtml(pkg.title || '') + '</a></h3>\n';
       html += '      <p>' + escapeHtml(pkg.brief || '') + '</p>\n';
       html += '    </div>\n';
-      html += '    <a href="contact.html" class="course-one__book-link">' + escapeHtml(ctaText || 'Book this course') + '</a>\n';
+      html += '    <a href="' + ctaSrc + '" class="course-one__book-link">' + escapeHtml(ctaText || 'Book this course') + '</a>\n';
       html += '  </div>\n';
       html += '</div>\n';
     });

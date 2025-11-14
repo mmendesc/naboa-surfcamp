@@ -70,9 +70,10 @@
   },
   "packages": {
     "package1": {
-      "label": "Iniciante",
-      "title": "Iniciante",
-      "brief": "Pacote para quem nunca surfou antes, inclui aula e equipamento"
+      "label": "Aula",
+      "title": "Avulsa",
+      "brief": "Aula individual personalizada, para qualquer nivel e pessoa",
+      "serviceName": "avulso"
     },
     "package2": {
       "label": "Intermediário",
