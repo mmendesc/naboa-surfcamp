@@ -1279,8 +1279,11 @@ a:focus {
 }
 
 .side-menu__block.active {
-	-webkit-transform: scale(1, 1);
-	transform: scale(1, 1);
+	-webkit-transform: scale(1, 1) !important;
+	transform: scale(1, 1) !important;
+	visibility: visible !important;
+	opacity: 1 !important;
+	pointer-events: auto !important;
 }
 
 .side-menu__block-overlay {

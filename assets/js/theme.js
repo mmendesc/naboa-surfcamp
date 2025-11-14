@@ -1,8 +1,6 @@
 (function ($) {
     "use strict";
 
-
-
     //Submenu Dropdown Toggle
     if ($('.main-nav__main-navigation li.dropdown ul').length) {
         $('.main-nav__main-navigation li.dropdown').append('<button class="dropdown-btn"><i class="fa fa-angle-right"></i></button>');
@@ -29,24 +27,25 @@
         }
     }
 
-    // mobile menu
+    // mobile menu - encapsulated so it can be re-run after header partials are injected
+    function initMobileMenu() {
+        // Theme no longer appends mobile nav markup. `partials.js` is the
+        // authoritative loader that populates `.mobile-nav__container`.
+        // Here we only bind behavior (idempotently), using delegated handlers
+        // so bindings work whether the markup is present now or injected later.
+        if (!$('.mobile-nav__container').length) return;
 
-    if ($('.main-nav__main-navigation').length) {
-        let mobileNavContainer = $('.mobile-nav__container');
-        let mainNavContent = $('.main-nav__main-navigation').html();
+        var mobileNavContainer = $('.mobile-nav__container');
 
-
-
-        mobileNavContainer.append(function () {
-            return mainNavContent;
-        });
-
-
-
-        //Dropdown Button
-        mobileNavContainer.find('li.dropdown .dropdown-btn').on('click', function () {
-            $(this).toggleClass('open');
-            $(this).prev('ul').slideToggle(500);
+        // delegated dropdown button handler for mobile nav
+        $(document).off('click.mobileDropdown').on('click.mobileDropdown', '.mobile-nav__container li.dropdown .dropdown-btn', function (e) {
+            var $btn = $(this);
+            $btn.toggleClass('open');
+            var $ul = $btn.closest('li.dropdown').find('ul').first();
+            if ($ul.length) {
+                $ul.slideToggle(500);
+            }
+            e.preventDefault();
         });
 
         // dynamic current class        
@@ -55,9 +54,12 @@
 
         dynamicCurrentMenuClass(mainNavUL);
         dynamicCurrentMenuClass(mobileNavUL);
-
-
     }
+
+    // run once at load
+    initMobileMenu();
+    // run again after partials (header) are injected
+    document.addEventListener('partialsLoaded', initMobileMenu);
 
 
     if ($('.mc-form').length) {
@@ -246,19 +248,28 @@
         });
     }
 
-    if ($('.side-menu__toggler').length) {
-        $('.side-menu__toggler').on('click', function (e) {
-            $('.side-menu__block').toggleClass('active');
-            e.preventDefault();
-        });
-    }
+    // delegated side-menu handlers: robust for dynamically-injected header markup
+    // use namespaced delegated events so handlers work even when elements are added later
+    $(document).off('click.sideMenu').on('click.sideMenu', '.side-menu__toggler', function (e) {
+        // toggle the side menu
+        var sideMenu = document.querySelector('.side-menu__block');
+        if (sideMenu) {
+            sideMenu.classList.toggle('active');
+                // toggled side-menu; no debug logging
+        } else {
+            // side-menu element not found
+        }
+        e.preventDefault();
+    });
 
-    if ($('.side-menu__block-overlay').length) {
-        $('.side-menu__block-overlay').on('click', function (e) {
-            $('.side-menu__block').removeClass('active');
-            e.preventDefault();
-        });
-    }
+    $(document).off('click.sideMenuOverlay').on('click.sideMenuOverlay', '.side-menu__block-overlay', function (e) {
+        var sideMenu = document.querySelector('.side-menu__block');
+        if (sideMenu) {
+            sideMenu.classList.remove('active');
+                // removed side-menu active class; no debug logging
+        }
+        e.preventDefault();
+    });
 
 
     if ($('.search-popup__toggler').length) {
