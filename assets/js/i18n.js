@@ -117,7 +117,7 @@ function renderPackages() {
       html += '      <h3><a href="course-details.html">' + escapeHtml(pkg.title || '') + '</a></h3>\n';
       html += '      <p>' + escapeHtml(pkg.brief || '') + '</p>\n';
       html += '    </div>\n';
-      html += '    <a href="' + ctaSrc + '" class="course-one__book-link">' + escapeHtml(ctaText || 'Book this course') + '</a>\n';
+       html += '    <a href="contact.html" class="course-one__book-link">' + escapeHtml(ctaText || 'Book this course') + '</a>\n';
       html += '  </div>\n';
       html += '</div>\n';
     });
