@@ -119,6 +119,26 @@
     "feature2": "Instrutores experientes",
     "feature3": "Equipamento de qualidade"
   },
+  "faq": {
+    "header": "Perguntas Frequentes",
+    "subheader": "Tire suas dúvidas",
+    "question1": {
+      "title": "Preciso saber surfar para fazer uma aula de surf?",
+      "answer": "Não, nossas aulas de surf são projetadas para todos os níveis, desde iniciantes completos até surfistas avançados. Nossos instrutores experientes adaptarão a aula às suas necessidades e habilidades."
+    },
+    "question2": {
+      "title": "Qual é a duração típica de uma aula de surf?",
+      "answer": "Nossas aulas de surf geralmente duram entre 1 a 2 horas, dependendo do pacote escolhido e do nível do aluno."
+    },
+    "question3": {
+      "title": "Como faço para reservar uma aula ou pacote?",
+      "answer": "Você pode reservar uma aula ou pacote diretamente através do nosso site, entrando em contato conosco por e-mail ou telefone."
+    },
+    "question4": {
+      "title": "Onde posso me hospedar durante minha estadia?",
+      "answer": "Temos parcerias com acomodações locais e podemos ajudar a recomendar lugares para ficar durante sua estadia conosco."
+    }
+  },
   "footer": {
     "about": "Sobre Nós",
     "explore": {

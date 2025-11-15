@@ -51,10 +51,17 @@
       "days": "",
       "daysText": "",
       "headerTitle": "Detalhes",
-      "paragraph1": ["teste1", "teste2", "teste3"],
+      "paragraph1": [
+        "Aula de Surf individual, para todos os níveis de surfistas. Não é necessário ter experiência prévia.",
+        "Sempre sonhou em surfar mas nunca teve coragem nem oportunidade e não se sabe se leva jeito pro esporte?(Resposta: todo mundo leva jeito!) ",
+        "Nós te ajudamos a realizar esse sonho e começar sua jornada no surf.",
+        "",
+        "E se você já surfa, mas ainda precisa de ajuda para melhorar sua técnica, ganhar confiança e se sentir mais confortável no mar, essa aula também é pra você!",
+        "Nossos instrutores vão trabalhar com você para identificar suas áreas de melhoria e se adaptar às suas necessidades"
+      ],
       "tipsHeader": "Recomendações",
       "tipsPara1": "- Nós provemos todo o material necessario, mas caso tenha prancha de surf propria, traga junto. <br> - Use roupas confortaveis e protetor solar. <br> - Chegue 15 minutos antes para se preparar.",
-      "tipsPara2": "Quando um impressor desconhecido pegou uma galera de tipos e a embaralhou para fazer um livro de amostras.",
+      "tipsPara2": "Entre em contato conosco abaixo para agendar sua aula.",
       "cta": "Contacte para mais detalhes"
     }
   }

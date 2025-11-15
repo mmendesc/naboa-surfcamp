@@ -74,7 +74,7 @@ function translateAllElements() {
     if (key) {
       // allow translation strings to contain HTML tags
       // NOTE: only do this for trusted translation content to avoid XSS risks
-      el.innerHTML = i18next.t(key, {'interpolation': {'escapeValue': false}});
+      el.innerHTML = i18next.t(key, {'interpolation': {'escapeValue': false}, joinArrays: ' <br>'});
     }
   });
 }
@@ -102,19 +102,19 @@ function renderPackages() {
       if (!pkg) return;
   var imgIndex = (idx % 6) + 1; // cycle through available course images
   var imgSrc = 'assets/images/courses/course-1-' + imgIndex + '.jpg';
-      var ctaSrc = 'course-details.html?service=' + pkg.serviceName;
+  var ctaSrc = 'course-details.html?service=' + pkg.serviceName;
 
       html += '<div class="item">\n';
       html += '  <div class="course-one__single">\n';
       html += '    <div class="course-one__image">\n';
-      html += '      <a href="course-details.html" class="course-one__cat">' + escapeHtml(pkg.label || '') + '</a>\n';
+      html += '      <a href="' + ctaSrc + '" class="course-one__cat">' + escapeHtml(pkg.label || '') + '</a>\n';
       html += '      <div class="course-one__image-inner">\n';
       html += '        <img src="' + imgSrc + '" alt="">\n';
-      html += '        <a href="course-details.html"><i class="scubo-icon-plus-symbol"></i></a>\n';
+      html += '        <a href="' + ctaSrc + '"><i class="scubo-icon-plus-symbol"></i></a>\n';
       html += '      </div>\n';
       html += '    </div>\n';
       html += '    <div class="course-one__content hvr-sweep-to-bottom">\n';
-      html += '      <h3><a href="course-details.html">' + escapeHtml(pkg.title || '') + '</a></h3>\n';
+      html += '      <h3><a href="' + ctaSrc + '">' + escapeHtml(pkg.title || '') + '</a></h3>\n';
       html += '      <p>' + escapeHtml(pkg.brief || '') + '</p>\n';
       html += '    </div>\n';
       html += '    <a href="' + ctaSrc + '" class="course-one__book-link">' + escapeHtml(ctaText || 'Book this course') + '</a>\n';
