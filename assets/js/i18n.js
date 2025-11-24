@@ -180,6 +180,43 @@ function bindFlagHandlers() {
   });
 }
 
+// Add delegated binding for mobile flags using data-flag attributes.
+// This ensures flags injected dynamically into the side menu are handled.
+(function() {
+  // Guard to avoid attaching multiple delegated listeners
+  if (window.__i18nDelegatedFlagHandlerAttached) return;
+  window.__i18nDelegatedFlagHandlerAttached = true;
+
+  function delegatedFlagClick(e) {
+    var el = e.target;
+    // support clicks on the img or the anchor
+    var anchor = el.closest && el.closest('[data-flag]');
+    if (!anchor) return;
+    var lang = anchor.getAttribute('data-flag');
+    if (!lang) return;
+    e.preventDefault && e.preventDefault();
+    // Use the existing changeLanguage helper
+    changeLanguage(lang).then(function() {
+      translateAllElements();
+      renderPackages();
+    }).catch(function(err) {
+      console.error('changeLanguage failed', err);
+    });
+  }
+
+  // Attach after DOMContentLoaded so anchors may exist, and also listen to partialsLoaded
+  document.addEventListener('DOMContentLoaded', function() {
+    document.body.addEventListener('click', delegatedFlagClick, false);
+  });
+  document.addEventListener('partialsLoaded', function() {
+    // ensure listener is attached if partials are injected after DOMContentLoaded
+    if (!document.body.__i18nFlagDelegation) {
+      document.body.addEventListener('click', delegatedFlagClick, false);
+      document.body.__i18nFlagDelegation = true;
+    }
+  });
+})();
+
 // Attempt to bind on DOMContentLoaded and also when partials are injected.
 document.addEventListener('DOMContentLoaded', function() {
   bindFlagHandlers();

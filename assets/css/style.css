@@ -1484,6 +1484,25 @@ a:focus {
 	margin-left: 19px;
 }
 
+/* Mobile side-menu flags: center them and add spacing for touch targets */
+.side-menu__flags {
+	display: flex;
+	gap: 12px; /* space between flags */
+	justify-content: center; /* center horizontally inside side-menu */
+	align-items: center;
+	margin: 14px 0 8px;
+	padding-top: 8px;
+}
+.side-menu__flags a {
+	display: inline-block;
+	padding: 6px; /* increase clickable area */
+}
+.side-menu__flags a img {
+	display: inline-block;
+	width: 26px;
+	height: auto;
+}
+
 
 /*-------------------------------------------------------------- 
  # Main Footer 
