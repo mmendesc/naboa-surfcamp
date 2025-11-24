@@ -159,6 +159,30 @@ function changeLanguage(language) {
   });
 }
 
+// Update visual 'active' state for flags in header and mobile side menu
+function updateActiveFlag(lang) {
+  try {
+    // remove active from any data-flag anchors
+    var dataFlags = document.querySelectorAll('[data-flag]');
+    Array.prototype.forEach.call(dataFlags, function(a) { a.classList.remove('active'); });
+
+    // add active to the matching data-flag anchor(s)
+    var matched = document.querySelectorAll('[data-flag="' + lang + '"]');
+    Array.prototype.forEach.call(matched, function(a) { a.classList.add('active'); });
+
+    // Also handle header IMG ids (if present) - toggle 'active' on those elements
+    var idMap = { pt: 'brasil-flag', en: 'usa-flag', es: 'spain-flag' };
+    Object.keys(idMap).forEach(function(k) {
+      var el = document.getElementById(idMap[k]);
+      if (el) {
+        if (k === lang) el.classList.add('active'); else el.classList.remove('active');
+      }
+    });
+  } catch (e) {
+    // non-critical
+  }
+}
+
 // Bind click handlers for flag elements (safe to call multiple times).
 function bindFlagHandlers() {
   var flagConfigs = [
@@ -169,11 +193,13 @@ function bindFlagHandlers() {
   flagConfigs.forEach(function(cfg) {
     var el = document.getElementById(cfg.id);
     if (el) {
-      el.onclick = function() {
+      el.onclick = function(e) {
+        e && e.preventDefault && e.preventDefault();
         changeLanguage(cfg.lang).then(function() {
           // After language change, update visible text and dynamic widgets
           translateAllElements();
           renderPackages();
+          updateActiveFlag(cfg.lang);
         });
       };
     }
@@ -199,6 +225,8 @@ function bindFlagHandlers() {
     changeLanguage(lang).then(function() {
       translateAllElements();
       renderPackages();
+      // update visual active state for flags
+      updateActiveFlag(lang);
     }).catch(function(err) {
       console.error('changeLanguage failed', err);
     });
@@ -231,6 +259,15 @@ document.addEventListener('partialsLoaded', function() {
     translateAllElements();
     renderPackages();
   }
+  // Ensure active flag visuals are applied after partials inject (flags may be
+  // dynamically added by the partials loader). Use the current i18next language
+  // when available, otherwise fall back to stored/default language.
+  try {
+    var currentLang = (i18nReady && window.i18next && i18next.language) ? i18next.language : (getStoredLanguage() || initialLang);
+    updateActiveFlag(currentLang);
+  } catch (e) {
+    // ignore
+  }
 });
 
 
@@ -254,6 +291,8 @@ loadTranslations().then(function(resources) {
   renderPackages();
   // Bind flag handlers in case header/footer were inline in the page
   bindFlagHandlers();
+  // Ensure active state is initialized for flags based on stored/default language
+  updateActiveFlag(initialLang);
 }).catch(function(err) {
   console.error('i18next init failed:', err);
 });

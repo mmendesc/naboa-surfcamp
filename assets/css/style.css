@@ -1503,6 +1503,19 @@ a:focus {
 	height: auto;
 }
 
+/* Active flag visuals: single underline using theme primary color */
+.side-menu__flags a.active {
+	border-bottom: 3px solid var(--thm-primary);
+	padding-bottom: 2px;
+}
+
+/* Header flag images (ids) get a subtle underline when active */
+#brasil-flag.active, #usa-flag.active, #spain-flag.active {
+	display: inline-block;
+	border-bottom: 3px solid var(--thm-primary);
+	padding-bottom: 2px;
+}
+
 
 /*-------------------------------------------------------------- 
  # Main Footer 
