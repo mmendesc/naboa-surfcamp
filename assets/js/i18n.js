@@ -101,7 +101,7 @@ function renderPackages() {
       var pkg = pkgObj[key];
       if (!pkg) return;
   var imgIndex = (idx % 6) + 1; // cycle through available course images
-  var imgSrc = 'assets/images/courses/' + pkg.serviceName + '.png';
+  var imgSrc = 'assets/images/courses/' + pkg.imageName;
   var ctaSrc = 'course-details.html?service=' + pkg.serviceName;
 
       html += '<div class="item">\n';
@@ -180,6 +180,47 @@ function updateActiveFlag(lang) {
     });
   } catch (e) {
     // non-critical
+  }
+}
+
+// Replace the course details header image with the value from the
+// per-service JSON file (assets/locales/services/{service}.json).
+// Expects the file to contain language keys (en,pt,es) and the image at
+// either `...[lang].courseDetails.headerImage` or `...[lang].headerImage`.
+function setCourseHeaderImage() {
+  try {
+    var params = new URLSearchParams(window.location.search);
+    var serviceName = params.get('service');
+    if (!serviceName) return;
+
+    var imgContainer = document.querySelector('.course-details__image img');
+    if (!imgContainer) return;
+
+    var servicePath = '/assets/locales/services/' + encodeURIComponent(serviceName) + '.json';
+    fetch(servicePath, { cache: 'no-cache' }).then(function(res) {
+      if (!res.ok) throw new Error('service json not found');
+      return res.json();
+    }).then(function(serviceJson) {
+      var lang = (i18nReady && window.i18next && i18next.language) ? i18next.language : (getStoredLanguage() || initialLang);
+      var candidate = null;
+      try {
+        if (serviceJson[lang] && serviceJson[lang].courseDetails && serviceJson[lang].courseDetails.headerImage) {
+          candidate = serviceJson[lang].courseDetails.headerImage;
+        } else if (serviceJson[lang] && serviceJson[lang].headerImage) {
+          candidate = serviceJson[lang].headerImage;
+        }
+      } catch (e) {
+        candidate = null;
+      }
+      if (candidate) {
+        // If the path is relative, leave as-is. Update src attribute.
+        imgContainer.setAttribute('src', candidate);
+      }
+    }).catch(function() {
+      // ignore missing service json
+    });
+  } catch (e) {
+    // ignore
   }
 }
 
@@ -265,6 +306,9 @@ document.addEventListener('partialsLoaded', function() {
   try {
     var currentLang = (i18nReady && window.i18next && i18next.language) ? i18next.language : (getStoredLanguage() || initialLang);
     updateActiveFlag(currentLang);
+      // also attempt to set the course header image in case the details
+      // area was already rendered or partials injected it after i18n init
+      setCourseHeaderImage();
   } catch (e) {
     // ignore
   }
@@ -293,6 +337,8 @@ loadTranslations().then(function(resources) {
   bindFlagHandlers();
   // Ensure active state is initialized for flags based on stored/default language
   updateActiveFlag(initialLang);
+  // Attempt to set the course header image from per-service JSON (if present)
+  setCourseHeaderImage();
 }).catch(function(err) {
   console.error('i18next init failed:', err);
 });

@@ -65,7 +65,7 @@
   },
   "coursesList": {
     "subheader": "Todos pacotes",
-    "header": "Pacotes mais<br> Procurados",
+    "header": "Nossos<br> Pacotes",
     "text": "Todos nosso serviços e pacotes estao listados abaixo, escolha de acordo com seu nivel"
   },
   "packages": {
@@ -73,28 +73,36 @@
       "label": "Aula",
       "title": "Aula de Surf",
       "brief": "Aula individual personalizada, para qualquer nivel e pessoa",
-      "serviceName": "avulso"
+      "serviceName": "avulso",
+      "imageName": "avulso.png"
     },
     "package2": {
-      "label": "Intermediário",
-      "title": "Intermediário",
-      "brief": "Pacote para quem já tem alguma experiência, inclui aula e equipamento"
-    },
-    "package3": {
       "label": "Iniciante",
       "title": "Pacote Iniciante",
       "brief": "Pacote para surfistas experientes, inclui apenas equipamento",
-      "serviceName": "iniciante"
+      "serviceName": "iniciante",
+      "imageName": "iniciante.jpg"
+    },
+    "package3": {
+      "label": "Acompanhamento",
+      "title": "Acompanhamento de Surf",
+      "brief": "Pacote para quem já tem alguma experiência, inclui equipamento",
+      "serviceName": "coach",
+      "imageName": "coach.png"
     },
     "package4": {
-      "label": "Equipamento",
+      "label": "Pranchas",
       "title": "Aluguel de Pranchas",
-      "brief": "Alugue pranchas com a gente, temos uma variedade de modelos"
+      "brief": "Alugue pranchas com a gente, temos uma variedade de modelos",
+      "serviceName": "aluguel",
+      "imageName": "aluguel.png"
     },
-    "package6": {
-      "label": "Filmagem",
-      "title": "Captação de Imagens",
-      "brief": "Grave suas sessoes de surf para video analisar"
+    "package5": {
+      "label": "Weekend",
+      "title": "Weekend Experience",
+      "brief": "Grave suas sessoes de surf para video analisar",
+      "serviceName": "experience",
+      "imageName": "experience.png"
     },
     "cta": "Saiba mais"
   },
@@ -128,8 +136,8 @@
       "answer": "Não, nossas aulas de surf são projetadas para todos os níveis, desde iniciantes completos até surfistas avançados. Nossos instrutores experientes adaptarão a aula às suas necessidades e habilidades."
     },
     "question2": {
-      "title": "Qual é a duração típica de uma aula de surf?",
-      "answer": "Nossas aulas de surf geralmente duram entre 1 a 2 horas, dependendo do pacote escolhido e do nível do aluno."
+      "title": "Preciso ter equipamento próprio para as aulas?",
+      "answer": "Não, nós fornecemos todo o equipamento necessário para as aulas de surf. No entanto, se você tiver sua própria prancha ou equipamento, sinta-se à vontade para trazê-los."
     },
     "question3": {
       "title": "Como faço para reservar uma aula ou pacote?",
