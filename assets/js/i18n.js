@@ -101,7 +101,7 @@ function renderPackages() {
       var pkg = pkgObj[key];
       if (!pkg) return;
   var imgIndex = (idx % 6) + 1; // cycle through available course images
-  var imgSrc = 'assets/images/courses/course-1-' + imgIndex + '.jpg';
+  var imgSrc = 'assets/images/courses/' + pkg.serviceName + '.png';
   var ctaSrc = 'course-details.html?service=' + pkg.serviceName;
 
       html += '<div class="item">\n';
