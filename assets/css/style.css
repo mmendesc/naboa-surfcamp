@@ -1312,9 +1312,12 @@ a:focus {
 	position: relative;
 	display: -webkit-box;
 	display: flex;
-	-webkit-box-pack: center;
-	justify-content: center;
-	align-content: space-between;
+	/* vertical layout so top/logo+nav sit above and copyright/social stay at bottom */
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .side-menu__block-inner .mCustomScrollBox {
@@ -1339,9 +1342,13 @@ a:focus {
 }
 
 .mobile-nav__container {
-	margin: 40px 0;
+	margin: 20px 0;
 	border-top: 1px solid rgba(var(--thm-base-rgb), .3);
 	border-bottom: 1px solid rgba(var(--thm-base-rgb), .3);
+	/* allow the nav area to grow and scroll if it overflows on small screens */
+	flex: 1 1 auto;
+	width: 100%;
+	overflow-y: auto;
 }
 
 .mobile-nav__container ul {

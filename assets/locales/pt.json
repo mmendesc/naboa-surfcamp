@@ -71,7 +71,7 @@
   "packages": {
     "package1": {
       "label": "Aula",
-      "title": "Avulsa",
+      "title": "Aula de Surf",
       "brief": "Aula individual personalizada, para qualquer nivel e pessoa",
       "serviceName": "avulso"
     },
@@ -81,9 +81,10 @@
       "brief": "Pacote para quem já tem alguma experiência, inclui aula e equipamento"
     },
     "package3": {
-      "label": "Avançado",
-      "title": "Avançado",
-      "brief": "Pacote para surfistas experientes, inclui apenas equipamento"
+      "label": "Iniciante",
+      "title": "Pacote Iniciante",
+      "brief": "Pacote para surfistas experientes, inclui apenas equipamento",
+      "serviceName": "iniciante"
     },
     "package4": {
       "label": "Equipamento",
