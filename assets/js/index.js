@@ -48,7 +48,7 @@
     html += '          </div>\n';
     html += '          <div class="testimonials-one__infos-content">\n';
     html += '            <h3>' + escapeHtml(t.name || '') + '</h3>\n';
-    html += '            <span>' + escapeHtml(t.title || '') + '</span>\n';
+    html += '            <span>' + escapeHtml(t.location || '') + '</span>\n';
     html += '          </div>\n';
     html += '        </div>\n';
     html += '      </div>\n';
