@@ -29,7 +29,19 @@
   content: "\e908";
 }
 .scubo-icon-aqualung:before {
-  content: "\e900";
+  /* Use an SVG image instead of the font glyph for this icon.
+     Keeps other icon font rules intact while allowing richer SVG rendering. */
+  content: '' !important;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  min-width: 1em;
+  min-height: 1em;
+  vertical-align: middle;
+  background-image: url('/assets/images/services/prancha.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 .scubo-icon-checked:before {
   content: "\e901";
@@ -38,16 +50,52 @@
   content: "\e902";
 }
 .scubo-icon-scuba-diving:before {
-  content: "\e903";
+  /* Use an SVG image instead of the font glyph for this icon.
+     Keeps other icon font rules intact while allowing richer SVG rendering. */
+  content: '' !important;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  min-width: 1em;
+  min-height: 1em;
+  vertical-align: middle;
+  background-image: url('/assets/images/services/surf.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 .scubo-icon-snorkel:before {
-  content: "\e904";
+  /* Use an SVG image instead of the font glyph for this icon.
+     Keeps other icon font rules intact while allowing richer SVG rendering. */
+  content: '' !important;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  min-width: 1em;
+  min-height: 1em;
+  vertical-align: middle;
+  background-image: url('/assets/images/services/casa.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 .scubo-icon-snorkeling:before {
   content: "\e905";
 }
 .scubo-icon-swimming:before {
-  content: "\e906";
+  /* Use an SVG image instead of the font glyph for this icon.
+     Keeps other icon font rules intact while allowing richer SVG rendering. */
+  content: '' !important;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  min-width: 1em;
+  min-height: 1em;
+  vertical-align: middle;
+  background-image: url('/assets/images/services/tripe.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 .scubo-icon-plus-symbol:before {
   content: "\e907";
