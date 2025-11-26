@@ -1,0 +1,62 @@
+{
+  "pt": {
+    "courseDetails": {
+      "breadcrumbs": {
+        "home": "Início",
+        "courses": "",
+        "current": "NABOA"
+      },
+      "pageTitle": "NABOA",
+      "headerTitle": "Detalhes",
+      "headerImage": "assets/images/courses/kite.png",
+      "paragraph1": [
+        "Aula de Surf individual, para todos os níveis de surfistas. Não é necessário ter experiência prévia.",
+        "Sempre sonhou em surfar mas nunca teve coragem nem oportunidade e não se sabe se leva jeito pro esporte?(Resposta: todo mundo leva jeito!) ",
+        "Nós te ajudamos a realizar esse sonho e começar sua jornada no surf.",
+        "",
+        "E se você já surfa, mas ainda precisa de ajuda para melhorar sua técnica, ganhar confiança e se sentir mais confortável no mar, essa aula também é pra você!",
+        "Nossos instrutores vão trabalhar com você para identificar suas áreas de melhoria e se adaptar às suas necessidades"
+      ],
+      "tipsHeader": "Recomendações",
+      "tipsPara1": "- Nós provemos todo o material necessario, mas caso tenha prancha de surf propria, traga junto. <br> - Use roupas confortaveis e protetor solar. <br> - Chegue 15 minutos antes para se preparar.",
+      "tipsPara2": "Entre em contato conosco abaixo para agendar sua aula.",
+      "cta": "Contacte para mais detalhes"
+    }
+  },
+  "en": {
+    "courseDetails": {
+      "pageTitle": "Course Details",
+      "detailLabel": "Detail",
+      "priceLabel": "$89",
+      "priceText": "Dive price",
+      "dives": "2",
+      "divesText": "Dives only",
+      "days": "4",
+      "daysText": "day course",
+      "headerTitle": "Extended Range",
+      "paragraph1": "Need something changed or is there something not quite working the way you envisaged? Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      "tipsHeader": "Diving Tips",
+      "tipsPara1": "Neque porro est qui dolorem ipsum quia quaed inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+      "tipsPara2": "When an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "cta": "Contact for more details"
+    }
+  },
+  "es": {
+    "courseDetails": {
+      "pageTitle": "Detalles del Curso",
+      "detailLabel": "Detalle",
+      "priceLabel": "$89",
+      "priceText": "Precio de inmersión",
+      "dives": "2",
+      "divesText": "Solo inmersiones",
+      "days": "4",
+      "daysText": "curso de días",
+      "headerTitle": "Alcance Extendido",
+      "paragraph1": "¿Necesita algo cambiado o hay algo que no funciona como imaginaba? Lorem Ipsum es simplemente texto de relleno de la industria de la tipografía.",
+      "tipsHeader": "Consejos de Buceo",
+      "tipsPara1": "Neque porro est qui dolorem ipsum quia quaed inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+      "tipsPara2": "Cuando un impresor desconocido tomó una galera de tipo y la mezcló para hacer un libro de muestras.",
+      "cta": "Contacta para más detalles"
+    }
+  }
+}
