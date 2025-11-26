@@ -74,6 +74,39 @@
       // build items with index so we can assign sequential image filenames
       var html = items.map(function(t, i) { return buildTestimonialItem(t, i); }).join('\n');
       container.innerHTML = html;
+
+      // Ensure Owl carousel is (re)initialized for this container. Theme.js
+      // initializes `.thm__owl-carousel` on window.load, but if we inject
+      // content after that point we must init or reinit the carousel here so
+      // mobile behavior (one item at a time with nav arrows) works.
+      try {
+        if (window.jQuery) {
+          var $ = window.jQuery;
+          var $container = $(container);
+          var opts = $container.data('options') || {};
+
+          // If already initialized, destroy first to avoid duplicates
+          if ($container.hasClass('owl-loaded') && $container.trigger) {
+            try { $container.trigger('destroy.owl.carousel'); } catch (e) { /* ignore */ }
+          }
+
+          // Initialize with options from markup
+          var owl = $container.owlCarousel(opts);
+
+          // Re-bind prev/next controls if present
+          var prevSel = $container.data('carousel-prev-btn');
+          var nextSel = $container.data('carousel-next-btn');
+          if (prevSel) {
+            $(prevSel).off('click.indexOwl').on('click.indexOwl', function() { owl.trigger('prev.owl.carousel', [1000]); return false; });
+          }
+          if (nextSel) {
+            $(nextSel).off('click.indexOwl').on('click.indexOwl', function() { owl.trigger('next.owl.carousel', [1000]); return false; });
+          }
+        }
+      } catch (e) {
+        // non-fatal
+        console.warn('Could not (re)initialize testimonials carousel', e);
+      }
     } catch (e) {
       console.error('renderTestimonialsFromLocales error', e);
     }
