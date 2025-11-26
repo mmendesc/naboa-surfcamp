@@ -1,12 +1,210 @@
 {
-  "welcome": "Welcome",
-  "greeting": "Hello, {{name}}!",
-  "pluralExample_one": "You have {{count}} notification.",
-  "pluralExample_other": "You have {{count}} notifications.",
+  "welcome": "Bem-vindo",
   "navigation": {
-    "home": "Welcome",
-    "about": "About",
-    "courses": "Courses",
-    "contact": "Contact"
+    "home": "Inicio",
+    "stay": {
+      "title": "Estadia",
+      "casamar": "Casa Mar",
+      "taiba": "Taíba"
+    },
+    "packages": {
+      "title": "Pacotes",
+      "surf": "Surf",
+      "rental": "Aluguel",
+      "images": "Imagens"
+    },
+    "about": {
+      "title": "Sobre"
+    },
+    "store": {
+      "title": "Loja"
+    },
+    "contact": "Contato"
+  },
+  "sliderCarousel": {
+    "slider1": {
+      "subtitle": "Fique na boa",
+      "title": "Venha Surfar com a gente",
+      "cta": "Pacotes"
+    },
+    "slider2": {
+      "subtitle": "Nao importa seu nivel",
+      "title": "Do iniciante ao avancado",
+      "cta": "Pacotes"
+    },
+    "slider3": {
+      "subtitle": "Um paraiso",
+      "title": "Venha Conhecer a taiba",
+      "cta": "Taiba"
+    }
+  },
+  "ctaTwo": {
+    "text": "Oferecemos serviço personalizado e com segurança",
+    "button": "Comece agora"
+  },
+  "ourServices": {
+    "floatedText": "SERVIÇOS",
+    "subtitle": "NOSSOS SERVIÇOS",
+    "title": "O QUE OFERECEMOS",
+    "surfLessons": {
+      "header": "Aulas de <br> Surf",
+      "text": "Oferecemos aulas de surf"
+    },
+    "rentalBoards": {
+      "header": "Aluguel de <br> Pranchas",
+      "text": "Alugue pranchas com a gente"
+    },
+    "film": {
+      "header": "Surf <br> Coach",
+      "text": "Grave suas sessoes de surf para video analisar"
+    },
+    "retreats": {
+      "header": "Imersões de<br> Surf",
+      "text": "Final de semana de imersao com muito surf, comida e experiencias"
+    }
+  },
+  "coursesList": {
+    "subheader": "Todos pacotes",
+    "header": "Nossos<br> Pacotes",
+    "text": "Todos nosso serviços e pacotes estao listados abaixo, escolha de acordo com seu nivel"
+  },
+  "packages": {
+    "package1": {
+      "label": "Aula",
+      "title": "Aula de Surf",
+      "brief": "Aula individual personalizada, para qualquer nivel e pessoa",
+      "serviceName": "avulso",
+      "imageName": "avulso.png",
+      "category": "surf"
+    },
+    "package2": {
+      "label": "Iniciante",
+      "title": "Pacote Iniciante",
+      "brief": "Pacote para surfistas experientes, inclui apenas equipamento",
+      "serviceName": "iniciante",
+      "imageName": "iniciante.jpg",
+      "category": "surf"
+    },
+    "package3": {
+      "label": "Acompanhamento",
+      "title": "Acompanhamento de Surf",
+      "brief": "Pacote para quem já tem alguma experiência, inclui equipamento",
+      "serviceName": "coach",
+      "imageName": "coach.png",
+      "category": "surf"
+    },
+    "package4": {
+      "label": "Pranchas",
+      "title": "Aluguel de Pranchas",
+      "brief": "Alugue pranchas com a gente, temos uma variedade de modelos",
+      "serviceName": "aluguel",
+      "imageName": "aluguel.png",
+      "category": "boards"
+    },
+    "package5": {
+      "label": "Weekend",
+      "title": "Weekend Experience",
+      "brief": "Grave suas sessoes de surf para video analisar",
+      "serviceName": "experience",
+      "imageName": "experience.png",
+      "category": "surf"
+    },
+    "cta": "Saiba mais"
+  },
+  "taibaSection": {
+    "subheader": "conheça mais sobre nosso local",
+    "header": "Por que a Taiba?",
+    "text": "Taiba é um lugar tranquilo e com altas ondas",
+    "button": "Conheça mais"
+  },
+  "testimonials": {
+    "subheader": "comentarios",
+    "header": "O que falam sobre a gente",
+    "testimonies": [
+      {
+        "quote": "Viemos de SP para ter essa experiência maravilhosa no NaBoa Surf Camp! O professor Caio conduziu todas as nossas aulas (3 dias seguidos) com muito carinho e paciência que resultou num progresso incrível! Recomendo muito e já pretendo voltar ✨🙏🍃",
+        "name": "Victoria",
+        "title": "Surfista Iniciante",
+        "image": "assets/images/testimonials/01.png"
+      },
+      {
+        "quote": "Experiência incrível, recomendo demais! Kaio é um excelente instrutor e me deixou muito à vontade e segura pra me divertir com tranquilidade na minha primeira aula de surf. Ele tem muita técnica e didática, tem paciência e sabe demais! Recomendo muito mesmo.",
+        "name": "Maria Oliveira",
+        "title": "Surfista Intermediária",
+        "image": "assets/images/testimonials/02.png"
+      },
+      {
+        "quote": "Faço aulas de surf em Fortaleza e fiz uma aula particular com o Caio, que foi um divisor de águas, experiência maravilhosa, ensina com muita calma e bastante técnica, já vou agendar mais aulas nessas férias e garantir minha evolução no surf",
+        "name": "Carlos Pereira",
+        "title": "Surfista Avançado",
+        "image": "assets/images/testimonials/03.png"
+      },
+      {
+        "quote": "Recepção incrível, Kaio é muito gente boa, prestou todo suporte pra gente, tem aluguel de pranchas, conhece o pico e sabe os melhores locais pra sua sessão!! Voltarei mais vezes. Obs: Ainda faz sessão de fotos e filmagens.",
+        "name": "Ana Costa",
+        "title": "Surfista Entusiasta",
+        "image": "assets/images/testimonials/04.png"
+      },
+      {
+        "quote": "Experiência incrível com uma galera muito acolhedora, atendimento e acomodações muito confortáveis e todos da empresa tornam o ambiente e a vivência maravilhosamente leve, confortável e especial! Super recomendo 👏🏼🏄‍♂️✌🏻🫶🏼",
+        "name": "Lucas Fernandes",
+        "title": "Surfista Iniciante",
+        "image": "assets/images/testimonials/05.png"
+      },
+      {
+        "quote": "Lugar incrível na Taíba. Energia boa, gente massa e clima super acolhedor. Recomendo demais!",
+        "name": "Lucas Fernandes",
+        "title": "Surfista Iniciante",
+        "image": "assets/images/testimonials/06.png"
+      },
+      {
+        "quote": "Ambiente aconchegante Profissionais muito solícitos Voltarei em breve",
+        "name": "Lucas Fernandes",
+        "title": "Surfista Iniciante",
+        "image": "assets/images/testimonials/07.png"
+      }
+    ]
+  },
+  "kiteSection": {
+    "subheader": "Praticante de Kitesurf?",
+    "header": "Venha aprender a <br> Surfar Também",
+    "sideHeader": "Aprenda mais um esporte",
+    "text": "Se você já pratica kitesurf, venha aprender a surfar conosco em Taíba, um dos melhores picos do Brasil.",
+    "button": "Saiba mais"
+  },
+  "featuresList": {
+    "feature1": "Onda o ano todo",
+    "feature2": "Instrutores experientes",
+    "feature3": "Equipamento de qualidade"
+  },
+  "faq": {
+    "header": "Perguntas Frequentes",
+    "subheader": "Tire suas dúvidas",
+    "question1": {
+      "title": "Preciso saber surfar para fazer uma aula de surf?",
+      "answer": "Não, nossas aulas de surf são projetadas para todos os níveis, desde iniciantes completos até surfistas avançados. Nossos instrutores experientes adaptarão a aula às suas necessidades e habilidades."
+    },
+    "question2": {
+      "title": "Preciso ter equipamento próprio para as aulas?",
+      "answer": "Não, nós fornecemos todo o equipamento necessário para as aulas de surf. No entanto, se você tiver sua própria prancha ou equipamento, sinta-se à vontade para trazê-los."
+    },
+    "question3": {
+      "title": "Como faço para reservar uma aula ou pacote?",
+      "answer": "Você pode reservar uma aula ou pacote diretamente através do nosso site, entrando em contato conosco por e-mail ou telefone."
+    },
+    "question4": {
+      "title": "Onde posso me hospedar durante minha estadia?",
+      "answer": "Temos parcerias com acomodações locais e podemos ajudar a recomendar lugares para ficar durante sua estadia conosco."
+    }
+  },
+  "footer": {
+    "about": "Sobre Nós",
+    "explore": {
+      "title": "Explorar",
+      "packages": "Pacotes",
+      "stay": "Estadia",
+      "store": "Loja"
+    },
+    "follow": "Siga nossas redes"
   }
 }
