@@ -74,35 +74,40 @@
       "title": "Aula de Surf",
       "brief": "Aula individual personalizada, para qualquer nivel e pessoa",
       "serviceName": "avulso",
-      "imageName": "avulso.png"
+      "imageName": "avulso.png",
+      "category": "surf"
     },
     "package2": {
       "label": "Iniciante",
       "title": "Pacote Iniciante",
       "brief": "Pacote para surfistas experientes, inclui apenas equipamento",
       "serviceName": "iniciante",
-      "imageName": "iniciante.jpg"
+      "imageName": "iniciante.jpg",
+      "category": "surf"
     },
     "package3": {
       "label": "Acompanhamento",
       "title": "Acompanhamento de Surf",
       "brief": "Pacote para quem já tem alguma experiência, inclui equipamento",
       "serviceName": "coach",
-      "imageName": "coach.png"
+      "imageName": "coach.png",
+      "category": "surf"
     },
     "package4": {
       "label": "Pranchas",
       "title": "Aluguel de Pranchas",
       "brief": "Alugue pranchas com a gente, temos uma variedade de modelos",
       "serviceName": "aluguel",
-      "imageName": "aluguel.png"
+      "imageName": "aluguel.png",
+      "category": "boards"
     },
     "package5": {
       "label": "Weekend",
       "title": "Weekend Experience",
       "brief": "Grave suas sessoes de surf para video analisar",
       "serviceName": "experience",
-      "imageName": "experience.png"
+      "imageName": "experience.png",
+      "category": "surf"
     },
     "cta": "Saiba mais"
   },
