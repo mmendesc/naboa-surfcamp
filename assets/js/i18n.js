@@ -123,6 +123,32 @@ function renderPackages() {
     });
 
     container.innerHTML = html;
+    // If this carousel was injected after theme.js ran, ensure Owl is (re)initialized
+    try {
+      if (window.jQuery) {
+        var $ = window.jQuery;
+        var $container = $(container);
+        var opts = $container.data('options') || {};
+
+        if ($container.hasClass('owl-loaded') && $container.trigger) {
+          try { $container.trigger('destroy.owl.carousel'); } catch (e) { /* ignore */ }
+        }
+
+        var owl = $container.owlCarousel(opts);
+
+        var prevSel = $container.data('carousel-prev-btn');
+        var nextSel = $container.data('carousel-next-btn');
+        if (prevSel) {
+          $(prevSel).off('click.i18nOwl').on('click.i18nOwl', function() { owl.trigger('prev.owl.carousel', [1000]); return false; });
+        }
+        if (nextSel) {
+          $(nextSel).off('click.i18nOwl').on('click.i18nOwl', function() { owl.trigger('next.owl.carousel', [1000]); return false; });
+        }
+      }
+    } catch (e) {
+      // non-fatal
+      console.warn('Could not (re)initialize packages carousel', e);
+    }
   } catch (e) {
     console.error('renderPackages error', e);
   }
