@@ -5493,18 +5493,6 @@ a:focus {
 	padding-bottom: 145px;
 }
 
-/* Mobile spacing for testimonials: add vertical gap between stacked testimonial cards */
-@media (max-width: 767px) {
-	.testimonials-one__single {
-		margin-bottom: 18px;
-	}
-	.testimonials-one__content {
-		padding-left: 30px;
-		padding-right: 30px;
-		padding-top: 30px;
-	}
-}
-
 
 /*-------------------------------------------------------------- 
  # Funfact 

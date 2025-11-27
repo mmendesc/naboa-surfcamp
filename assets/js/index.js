@@ -23,14 +23,9 @@
   }
 
   function buildTestimonialItem(t, idx) {
-    // expected t: { quote, name, title }
-    // image should be based on index: assets/images/resources/01.png .. 07.png
-    var imageIndex = ((idx % 7) + 1); // 1..7
-    var pad = imageIndex < 10 ? '0' + imageIndex : String(imageIndex);
-  var imageSrc = 'assets/images/testimonies/' + pad + '.png';
-  // fallback to existing testi-1-X.jpg files if numbered png is missing
-  var fallbackIndex = ((imageIndex - 1) % 5) + 1; // there are 5 testi-1-X.jpg in resources
-  var fallbackSrc = 'assets/images/resources/testi-1-' + fallbackIndex + '.jpg';
+    // expected t: { quote, name, title, image }
+    // Use the provided `image` attribute from the testimony object as-is.
+    var imageSrc = t.image || '';
 
     var html = '';
     html += '<div class="item">\n';
@@ -42,8 +37,7 @@
   html += '        <div class="testimonials-one__infos">\n';
     html += '          <div class="testimonials-one__image">\n';
     html += '            <div class="testimonials-one__image-inner">\n';
-  // add onerror to fall back to a known jpg if the numbered png doesn't exist on the server
-  html += '              <img src="' + escapeHtml(imageSrc) + '" onerror="this.onerror=null;this.src=\'' + escapeHtml(fallbackSrc) + '\'" alt="">\n';
+  html += '              <img src="' + escapeHtml(imageSrc) + '" alt="">\n';
     html += '            </div>\n';
     html += '          </div>\n';
     html += '          <div class="testimonials-one__infos-content">\n';
