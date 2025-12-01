@@ -76,15 +76,15 @@
     "package2": {
       "label": "Iniciante",
       "title": "Pacote Iniciante",
-      "brief": "Pacote para surfistas experientes, inclui apenas equipamento",
+      "brief": "Introdução completa ao surf, nao precisa de experiencia prévia",
       "serviceName": "iniciante",
       "imageName": "iniciante.jpg",
       "category": "surf"
     },
     "package3": {
       "label": "Acompanhamento",
-      "title": "Acompanhamento de Surf",
-      "brief": "Pacote para quem já tem alguma experiência, inclui equipamento",
+      "title": "Surf Coach",
+      "brief": "Acompanhamento personalizado com video analise e aulas",
       "serviceName": "coach",
       "imageName": "coach.png",
       "category": "surf"
@@ -100,7 +100,7 @@
     "package5": {
       "label": "Weekend",
       "title": "Weekend Experience",
-      "brief": "Grave suas sessoes de surf para video analisar",
+      "brief": "Pacote com filmagem para quem vai passar o final de semana",
       "serviceName": "experience",
       "imageName": "experience.png",
       "category": "surf"
