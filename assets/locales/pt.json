@@ -23,7 +23,7 @@
   },
   "sliderCarousel": {
     "slider1": {
-      "subtitle": "Fique na boa",
+      "subtitle": "Conheça nosso surfcamp",
       "title": "Venha Surfar com a gente",
       "cta": "Pacotes"
     },
@@ -33,14 +33,10 @@
       "cta": "Pacotes"
     },
     "slider3": {
-      "subtitle": "Um paraiso",
+      "subtitle": "Agua quente o ano inteiro",
       "title": "Venha Conhecer a taiba",
-      "cta": "Taiba"
+      "cta": "Pacotes"
     }
-  },
-  "ctaTwo": {
-    "text": "Oferecemos serviço personalizado e com segurança",
-    "button": "Comece agora"
   },
   "ourServices": {
     "floatedText": "SERVIÇOS",
@@ -48,25 +44,25 @@
     "title": "O QUE OFERECEMOS",
     "surfLessons": {
       "header": "Aulas de <br> Surf",
-      "text": "Oferecemos aulas de surf"
+      "text": "Aulas de surf para todos os niveis, do iniciante ao avancado"
     },
     "rentalBoards": {
       "header": "Aluguel de <br> Pranchas",
-      "text": "Alugue pranchas com a gente"
+      "text": "Alugamos pranchas de surf do longboard a pranchinha, escolha o modelo ideal para voce"
     },
     "film": {
       "header": "Surf <br> Coach",
-      "text": "Grave suas sessoes de surf para video analisar"
+      "text": "Acompanhamento personalizado para sua evoluçao no surf, filmamos suas sessoes e analisamos juntos"
     },
     "retreats": {
       "header": "Imersões de<br> Surf",
-      "text": "Final de semana de imersao com muito surf, comida e experiencias"
+      "text": "Viva o surf intensamente, surf camps e imersoes com muita onda e comida boa"
     }
   },
   "coursesList": {
     "subheader": "Todos pacotes",
     "header": "Nossos<br> Pacotes",
-    "text": "Todos nosso serviços e pacotes estao listados abaixo, escolha de acordo com seu nivel"
+    "text": "Tudo que oferecemos na NaBoa Surf Camp está listado abaixo, escolha o pacote ideal para você <br> caso nao encontrou o que procura entre em contato com a gente"
   },
   "packages": {
     "package1": {
@@ -112,14 +108,14 @@
     "cta": "Saiba mais"
   },
   "taibaSection": {
-    "subheader": "conheça mais sobre nosso local",
-    "header": "Por que a Taiba?",
-    "text": "Taiba é um lugar tranquilo e com altas ondas",
+    "subheader": "Conheça esse paraíso",
+    "header": "Taíba um lugar ideal",
+    "text": "Ondas o ano inteiro em um lugar tranquilo e acolhedor",
     "button": "Conheça mais"
   },
   "testimonials": {
     "subheader": "comentarios",
-    "header": "O que falam sobre a gente",
+    "header": "O que falam sobre nós",
     "testimonies": [
       {
         "quote": "Viemos de SP para ter essa experiência maravilhosa no NaBoa Surf Camp! O professor Caio conduziu todas as nossas aulas (3 dias seguidos) com muito carinho e paciência que resultou num progresso incrível! Recomendo muito e já pretendo voltar ✨🙏🍃",
@@ -160,16 +156,11 @@
     ]
   },
   "kiteSection": {
-    "subheader": "Praticante de Kitesurf?",
-    "header": "Venha aprender a <br> Surfar Também",
+    "subheader": "O surf e o kite podem andar juntos",
+    "header": "Pratica Kitesurf?",
     "sideHeader": "Aprenda mais um esporte",
-    "text": "Se você já pratica kitesurf, venha aprender a surfar conosco em Taíba, <br> um dos melhores picos do Brasil.",
+    "text": "Se você já pratica kitesurf, venha aprender a surfar conosco em Taíba, <br> se encaixa perfeitamente na sua rotina",
     "button": "Saiba mais"
-  },
-  "featuresList": {
-    "feature1": "Onda o ano todo",
-    "feature2": "Instrutores experientes",
-    "feature3": "Equipamento de qualidade"
   },
   "faq": {
     "header": "Perguntas Frequentes",
@@ -184,11 +175,11 @@
     },
     "question3": {
       "title": "Como faço para reservar uma aula ou pacote?",
-      "answer": "Você pode reservar uma aula ou pacote diretamente através do nosso site, entrando em contato conosco por e-mail ou telefone."
+      "answer": "Você pode reservar uma aula ou pacote diretamente com a gente através do nosso whatsapp ou instagram. "
     },
     "question4": {
       "title": "Onde posso me hospedar durante minha estadia?",
-      "answer": "Temos parcerias com acomodações locais e podemos ajudar a recomendar lugares para ficar durante sua estadia conosco."
+      "answer": "Temos parceria com a Casa Mar Taíba, onde fica a sede do nosso surf camp, caso esteja lotada ou prefira outras opções sem problema. As aulas ocorrem normalmente e nosso ponto de encontro é na nossa sede dentro da Casa Mar."
     }
   },
   "footer": {
