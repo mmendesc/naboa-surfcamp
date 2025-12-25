@@ -4,7 +4,7 @@
       "breadcrumbs": {
         "home": "Início",
         "courses": "Estadias",
-        "current": "Casa Mar"
+        "current": "Hospedagem"
       },
       "pageTitle": "Casa Mar",
       "detailLabel": "",
@@ -17,16 +17,19 @@
       "headerTitle": "Detalhes",
       "headerImage": "assets/images/courses/casamar.png",
       "paragraph1": [
-        "Aula de Surf individual, para todos os níveis de surfistas. Não é necessário ter experiência prévia.",
-        "Sempre sonhou em surfar mas nunca teve coragem nem oportunidade e não se sabe se leva jeito pro esporte?(Resposta: todo mundo leva jeito!) ",
-        "Nós te ajudamos a realizar esse sonho e começar sua jornada no surf.",
+        "Pousada parceira da NaBoa Surf Camp, localizada na Praia da Taíba, a Casa Mar oferece acomodações confortáveis e um ambiente acolhedor para os amantes do surf.",
+        "Feita por e para surfistas, tem toda a estrutura necessária para surfistas, incluindo espaço para guardar pranchas, área para lavar equipamentos e um ambiente aconchegante para relaxar após um dia de surf.",
+        "A localização é estrategica, ficando a poucos metros da praia da Taibinha, que podemos ir apé, e é onde ocorre nossas aulas de surf.",
         "",
-        "E se você já surfa, mas ainda precisa de ajuda para melhorar sua técnica, ganhar confiança e se sentir mais confortável no mar, essa aula também é pra você!",
-        "Nossos instrutores vão trabalhar com você para identificar suas áreas de melhoria e se adaptar às suas necessidades"
+        "Possui quartos duplos, triplos e quádruplos, todos com ar condicionado, Wi-Fi gratuito e frigobar.",
+        "Além disso, é a base operacional do NaBoa Surf Camp, onde você pode encontrar nossa equipe e nossos equipamentos.",
+        "Possui também uma pista de skate para quem gosta de se aventar no simulador de surf, e também mesa de Tênis.",
+        "",
+        "Para verificar a disponiblidade e valores, acesse esse <a href='https://booking.hqbeds.com.br/casamartaiba' target='_blank'>link</a>"
       ],
-      "tipsHeader": "Recomendações",
-      "tipsPara1": "- Nós provemos todo o material necessario, mas caso tenha prancha de surf propria, traga junto. <br> - Use roupas confortaveis e protetor solar. <br> - Chegue 15 minutos antes para se preparar.",
-      "tipsPara2": "Entre em contato conosco abaixo para agendar sua aula.",
+      "tipsHeader": "Informações",
+      "tipsPara1": "- Você pode reservar sua estadia diretamente no site da Casa mar(link localizado acima)",
+      "tipsPara2": "- Não é necessário estar hospedado na Casa Mar para participar das aulas de surf ou qualquer serviço da NaBoa, mas é nossa parceira oficial e recomendamos casa haja vaga",
       "cta": "Contacte para mais detalhes"
     }
   },
