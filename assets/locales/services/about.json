@@ -34,37 +34,67 @@
   },
   "en": {
     "courseDetails": {
-      "pageTitle": "Course Details",
-      "detailLabel": "Detail",
-      "priceLabel": "$89",
-      "priceText": "Dive price",
-      "dives": "2",
-      "divesText": "Dives only",
-      "days": "4",
-      "daysText": "day course",
-      "headerTitle": "Extended Range",
-      "paragraph1": "Need something changed or is there something not quite working the way you envisaged? Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      "tipsHeader": "Diving Tips",
-      "tipsPara1": "Neque porro est qui dolorem ipsum quia quaed inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-      "tipsPara2": "When an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "breadcrumbs": {
+        "home": "Home",
+        "courses": "Stays",
+        "current": "NaBoa"
+      },
+      "pageTitle": "NaBoa",
+      "detailLabel": "",
+      "priceLabel": "",
+      "priceText": "",
+      "dives": "",
+      "divesText": "",
+      "days": "",
+      "daysText": "",
+      "headerTitle": "About NaBoa",
+      "headerImage": "assets/images/courses/about.png",
+      "paragraph1": [
+        "We are NaBoa Surf Camp, passionate about surfing and everything around it.",
+        "We want to share this passion with you, offering all necessary support and always maintaining a friendly, relaxed atmosphere.",
+        "We aim to build friendships and a surfing community with everyone who visits us, exchanging experiences.",
+        "",
+        "We chose Taíba as our home for its perfect combination of consistent waves, pleasant climate and welcoming character.",
+        "Come join our community",
+        "",
+        "Come stay with NaBoa too!"
+      ],
+      "tipsHeader": "",
+      "tipsPara1": "",
+      "tipsPara2": "",
       "cta": "Contact for more details"
     }
   },
   "es": {
     "courseDetails": {
-      "pageTitle": "Detalles del Curso",
-      "detailLabel": "Detalle",
-      "priceLabel": "$89",
-      "priceText": "Precio de inmersión",
-      "dives": "2",
-      "divesText": "Solo inmersiones",
-      "days": "4",
-      "daysText": "curso de días",
-      "headerTitle": "Alcance Extendido",
-      "paragraph1": "¿Necesita algo cambiado o hay algo que no funciona como imaginaba? Lorem Ipsum es simplemente texto de relleno de la industria de la tipografía.",
-      "tipsHeader": "Consejos de Buceo",
-      "tipsPara1": "Neque porro est qui dolorem ipsum quia quaed inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-      "tipsPara2": "Cuando un impresor desconocido tomó una galera de tipo y la mezcló para hacer un libro de muestras.",
+      "breadcrumbs": {
+        "home": "Inicio",
+        "courses": "Estadías",
+        "current": "NaBoa"
+      },
+      "pageTitle": "NaBoa",
+      "detailLabel": "",
+      "priceLabel": "",
+      "priceText": "",
+      "dives": "",
+      "divesText": "",
+      "days": "",
+      "daysText": "",
+      "headerTitle": "Sobre NaBoa",
+      "headerImage": "assets/images/courses/about.png",
+      "paragraph1": [
+        "Somos NaBoa Surf Camp, apasionados por el surf y todo lo relacionado con él.",
+        "Queremos compartir esta pasión contigo, ofreciendo todo el soporte necesario y siempre en un ambiente amigable y relajado.",
+        "Nuestro objetivo es construir amistades y una comunidad de surf con todos los que nos visitan, intercambiando experiencias.",
+        "",
+        "Elegimos Taíba como nuestro hogar por su combinación perfecta de olas consistentes, clima agradable y ambiente acogedor.",
+        "Ven a formar parte de nuestra comunidad",
+        "",
+        "¡Ven a quedarte con NaBoa también!"
+      ],
+      "tipsHeader": "",
+      "tipsPara1": "",
+      "tipsPara2": "",
       "cta": "Contacta para más detalles"
     }
   }

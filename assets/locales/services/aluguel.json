@@ -30,37 +30,59 @@
   },
   "en": {
     "courseDetails": {
-      "pageTitle": "Course Details",
-      "detailLabel": "Detail",
-      "priceLabel": "$89",
-      "priceText": "Dive price",
-      "dives": "2",
-      "divesText": "Dives only",
-      "days": "4",
-      "daysText": "day course",
-      "headerTitle": "Extended Range",
-      "paragraph1": "Need something changed or is there something not quite working the way you envisaged? Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      "tipsHeader": "Diving Tips",
-      "tipsPara1": "Neque porro est qui dolorem ipsum quia quaed inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-      "tipsPara2": "When an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "breadcrumbs": {
+        "home": "Home",
+        "courses": "Services",
+        "current": "Board Rental"
+      },
+      "pageTitle": "Board Rental",
+      "detailLabel": "INFO",
+      "priceLabel": "R$50",
+      "priceText": "",
+      "dives": "1",
+      "divesText": "Full day",
+      "days": "",
+      "daysText": "",
+      "headerTitle": "Details",
+      "headerImage": "assets/images/courses/aluguel-header.png",
+      "paragraph1": [
+        "We provide surfboards in various sizes and types.",
+        "Drop by our place and choose the one that best fits your surfing and the sea conditions.",
+        "All rentals are full-day, so you can make the most of the sea in the morning and afternoon.",
+        ""
+      ],
+      "tipsHeader": "Recommendations",
+      "tipsPara1": "- It's ideal that you already have some basic surfing knowledge and that this is not your first time in the ocean.",
+      "tipsPara2": "Contact us below to pick up your board",
       "cta": "Contact for more details"
     }
   },
   "es": {
     "courseDetails": {
-      "pageTitle": "Detalles del Curso",
-      "detailLabel": "Detalle",
-      "priceLabel": "$89",
-      "priceText": "Precio de inmersión",
-      "dives": "2",
-      "divesText": "Solo inmersiones",
-      "days": "4",
-      "daysText": "curso de días",
-      "headerTitle": "Alcance Extendido",
-      "paragraph1": "¿Necesita algo cambiado o hay algo que no funciona como imaginaba? Lorem Ipsum es simplemente texto de relleno de la industria de la tipografía.",
-      "tipsHeader": "Consejos de Buceo",
-      "tipsPara1": "Neque porro est qui dolorem ipsum quia quaed inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-      "tipsPara2": "Cuando un impresor desconocido tomó una galera de tipo y la mezcló para hacer un libro de muestras.",
+      "breadcrumbs": {
+        "home": "Inicio",
+        "courses": "Servicios",
+        "current": "Alquiler de Tablas"
+      },
+      "pageTitle": "Alquiler de Tablas",
+      "detailLabel": "INFO",
+      "priceLabel": "R$50",
+      "priceText": "",
+      "dives": "1",
+      "divesText": "Día completo",
+      "days": "",
+      "daysText": "",
+      "headerTitle": "Detalles",
+      "headerImage": "assets/images/courses/aluguel-header.png",
+      "paragraph1": [
+        "Disponemos de tablas de surf de varios tamaños y tipos.",
+        "Pasa por nuestro local y elige la que mejor se adapte a tu forma de surfear y a las condiciones del mar.",
+        "Todos los alquileres son de día completo, por lo que puedes aprovechar al máximo el mar por la mañana y la tarde.",
+        ""
+      ],
+      "tipsHeader": "Recomendaciones",
+      "tipsPara1": "- Es ideal que ya tengas cierta noción del surf y que no sea tu primera vez en el mar.",
+      "tipsPara2": "Contacta con nosotros abajo para retirar tu tabla",
       "cta": "Contacta para más detalles"
     }
   }

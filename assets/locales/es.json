@@ -3,7 +3,7 @@
   "navigation": {
     "home": "Inicio",
     "stay": {
-      "title": "Estancia",
+      "title": "Estadia",
       "casamar": "Casa Mar",
       "taiba": "Taíba"
     },
@@ -23,7 +23,7 @@
   },
   "sliderCarousel": {
     "slider1": {
-      "subtitle": "Mantente tranquilo",
+      "subtitle": "Conoce nuestro surfcamp",
       "title": "Ven a surfear con nosotros",
       "cta": "Paquetes"
     },
@@ -33,14 +33,10 @@
       "cta": "Paquetes"
     },
     "slider3": {
-      "subtitle": "Un paraíso",
+      "subtitle": "Agua caliente todo el año",
       "title": "Ven a conocer Taíba",
-      "cta": "Taiba"
+      "cta": "Paquetes"
     }
-  },
-  "ctaTwo": {
-    "text": "Ofrecemos servicio personalizado y con seguridad",
-    "button": "Comienza ahora"
   },
   "ourServices": {
     "floatedText": "SERVICIOS",
@@ -48,25 +44,25 @@
     "title": "LO QUE OFRECEMOS",
     "surfLessons": {
       "header": "Clases de <br> Surf",
-      "text": "Ofrecemos clases de surf"
+      "text": "Clases de surf para todos los niveles, desde principiantes hasta avanzados"
     },
     "rentalBoards": {
       "header": "Alquiler de <br> Tablas",
-      "text": "Alquila tablas con nosotros"
+      "text": "Alquilamos tablas de surf desde longboards hasta tablas pequeñas; elige el modelo ideal para ti"
     },
     "film": {
       "header": "Surf <br> Coach",
-      "text": "Graba tus sesiones de surf para análisis en vídeo"
+      "text": "Acompañamiento personalizado para tu evolución en el surf; filmamos tus sesiones y las analizamos juntos"
     },
     "retreats": {
       "header": "Inmersiones de<br> Surf",
-      "text": "Fin de semana de inmersión con mucho surf, comida y experiencias"
+      "text": "Vive el surf intensamente: surf camps e inmersiones con muchas olas y buena comida"
     }
   },
   "coursesList": {
     "subheader": "Todos los paquetes",
     "header": "Nuestros<br> Paquetes",
-    "text": "Todos nuestros servicios y paquetes están listados abajo, elige según tu nivel"
+    "text": "Todo lo que ofrecemos en NaBoa Surf Camp está listado abajo; elige el paquete ideal para ti. Si no encontraste lo que buscas, contáctanos"
   },
   "packages": {
     "package1": {
@@ -80,7 +76,7 @@
     "package2": {
       "label": "Principiante",
       "title": "Paquete Principiante",
-      "brief": "Paquete para surfistas principiantes, incluye equipo",
+      "brief": "Introducción completa al surf; no se requiere experiencia previa",
       "serviceName": "iniciante",
       "imageName": "iniciante.jpg",
       "category": "surf"
@@ -88,7 +84,7 @@
     "package3": {
       "label": "Acompañamiento",
       "title": "Acompañamiento de Surf",
-      "brief": "Paquete para quienes ya tienen algo de experiencia, incluye equipo",
+      "brief": "Acompañamiento personalizado con análisis de vídeo y clases",
       "serviceName": "coach",
       "imageName": "coach.png",
       "category": "surf"
@@ -96,7 +92,7 @@
     "package4": {
       "label": "Tablas",
       "title": "Alquiler de Tablas",
-      "brief": "Alquila tablas con nosotros, tenemos una variedad de modelos",
+      "brief": "Alquila tablas con nosotros; tenemos una variedad de modelos",
       "serviceName": "aluguel",
       "imageName": "aluguel.png",
       "category": "boards"
@@ -104,7 +100,7 @@
     "package5": {
       "label": "Fin de semana",
       "title": "Experiencia de Fin de Semana",
-      "brief": "Graba tus sesiones de surf para análisis en vídeo",
+      "brief": "Paquete con filmación para quienes pasan el fin de semana",
       "serviceName": "experience",
       "imageName": "experience.png",
       "category": "surf"
@@ -113,8 +109,8 @@
   },
   "taibaSection": {
     "subheader": "conoce más sobre nuestro lugar",
-    "header": "¿Por qué Taíba?",
-    "text": "Taíba es un lugar tranquilo con grandes olas",
+    "header": "Taíba — un lugar ideal",
+    "text": "Olas todo el año en un entorno tranquilo y acogedor",
     "button": "Conoce más"
   },
   "testimonials": {
@@ -122,54 +118,48 @@
     "header": "Lo que dicen sobre nosotros",
     "testimonies": [
       {
-        "quote": "Vinimos de SP para tener esta maravillosa experiencia en NaBoa Surf Camp. El profesor Caio dirigió todas nuestras clases (3 días seguidos) con mucho cariño y paciencia, lo que resultó en un progreso increíble. ¡Lo recomiendo mucho y ya planeo volver!",
+        "quote": "Vinimos de SP para tener esta experiencia maravillosa en NaBoa Surf Camp! El instructor Caio dirigió todas nuestras clases (tres días seguidos) con mucho cariño y paciencia, lo que resultó en un progreso increíble. ¡Lo recomiendo y ya planeo volver!",
         "name": "Victoria",
-        "title": "Surfista Principiante",
-        "image": "assets/images/testimonials/01.png"
+        "location": "São Paulo, SP",
+        "image": "assets/images/testimonies/01.png"
       },
       {
-        "quote": "¡Experiencia increíble, lo recomiendo mucho! Kaio es un excelente instructor y me hizo sentir muy cómoda y segura en mi primera clase de surf. Tiene mucha técnica y didáctica, es paciente y sabe mucho. Lo recomiendo mucho.",
-        "name": "Maria Oliveira",
-        "title": "Surfista Intermedia",
-        "image": "assets/images/testimonials/02.png"
+        "quote": "Experiencia increíble, muy recomendable! Kaio es un excelente instructor y me hizo sentir cómoda y segura durante mi primera clase de surf. Tiene mucha técnica y didáctica — muy paciente y profesional.",
+        "name": "Carla Tanaka",
+        "location": "Ceará, CE",
+        "image": "assets/images/testimonies/02.png"
       },
       {
-        "quote": "Tomo clases de surf en Fortaleza y tuve una clase particular con Caio, que fue un antes y un después; experiencia maravillosa. Enseña con mucha calma y técnica. Ya voy a agendar más clases en estas vacaciones para garantizar mi evolución en el surf.",
-        "name": "Carlos Pereira",
-        "title": "Surfista Avanzado",
-        "image": "assets/images/testimonials/03.png"
+        "quote": "Tomo clases de surf en Fortaleza y tuve una clase particular con Caio que marcó la diferencia — experiencia maravillosa. Enseña con calma y mucha técnica; reservaré más clases estas vacaciones para seguir mejorando.",
+        "name": "Sandy",
+        "location": "Ceará, CE",
+        "image": "assets/images/testimonies/03.png"
       },
       {
-        "quote": "Recepción increíble, Kaio es muy buena gente y nos brindó todo el soporte. Tienen alquiler de tablas, conoce el pico y sabe los mejores lugares para tu sesión. Volveré muchas veces. PD: También hacen sesiones de fotos y filmaciones.",
-        "name": "Ana Costa",
-        "title": "Surfista Entusiasta",
-        "image": "assets/images/testimonials/04.png"
+        "quote": "Lugar increíble en Taíba. Buena energía, gente genial y un ambiente muy acogedor. ¡Muy recomendable!",
+        "name": "Pedro",
+        "location": "Ceará, CE",
+        "image": "assets/images/testimonies/06.png"
       },
       {
-        "quote": "Experiencia increíble con un equipo muy acogedor, atención y alojamientos muy cómodos. ¡Super recomiendo!",
-        "name": "Lucas Fernandes",
-        "title": "Surfista Principiante",
-        "image": "assets/images/testimonials/05.png"
+        "quote": "Recepción fantástica — Kaio es muy buena persona, nos brindó todo el soporte, tiene alquiler de tablas, conoce los puntos y los mejores lugares para tu sesión! Volveré muchas veces. PD: También hacen sesiones de fotos y vídeo.",
+        "name": "Edmilson",
+        "location": "Ceará, CE",
+        "image": "assets/images/testimonies/04.png"
       },
       {
-        "quote": "Lugar increíble en Taíba. Buena energía, gente genial y un ambiente muy acogedor. ¡Lo recomiendo mucho!",
-        "name": "Lucas Fernandes",
-        "title": "Surfista Principiante",
-        "image": "assets/images/testimonials/06.png"
-      },
-      {
-        "quote": "Ambiente acogedor. Personal muy servicial. Volveré pronto.",
-        "name": "Lucas Fernandes",
-        "title": "Surfista Principiante",
-        "image": "assets/images/testimonials/07.png"
+        "quote": "Experiencia increíble con un equipo muy acogedor, atención y alojamientos muy cómodos — todo el mundo hace el ambiente maravillosamente ligero y especial. ¡Recomendado! 👏🏼🏄‍♂️✌🏻🫶🏼",
+        "name": "Bruno",
+        "location": "Ceará, CE",
+        "image": "assets/images/testimonies/05.png"
       }
     ]
   },
   "kiteSection": {
     "subheader": "¿Practicas kitesurf?",
-    "header": "Ven a aprender a surfear también",
+    "header": "¿Practicas Kitesurf?",
     "sideHeader": "Aprende otro deporte",
-    "text": "Si ya practicas kitesurf, ven a aprender a surfear con nosotros en Taíba, uno de los mejores spots de Brasil.",
+    "text": "Si ya practicas kitesurf, ven a aprender a surfear con nosotros en Taíba; encaja perfectamente en tu rutina",
     "button": "Saber más"
   },
   "featuresList": {
@@ -179,22 +169,22 @@
   },
   "faq": {
     "header": "Preguntas Frecuentes",
-    "subheader": "Aclará tus dudas",
+    "subheader": "Aclara tus dudas",
     "question1": {
       "title": "¿Necesito saber surfear para tomar una clase de surf?",
-      "answer": "No, nuestras clases de surf están diseñadas para todos los niveles, desde principiantes completos hasta surfistas avanzados. Nuestros instructores experimentados adaptarán la clase a tus necesidades y habilidades."
+      "answer": "No — nuestras clases de surf están diseñadas para todos los niveles, desde principiantes completos hasta surfistas avanzados. Nuestros instructores experimentados adaptarán la clase a tus necesidades y habilidades."
     },
     "question2": {
       "title": "¿Necesito tener mi propio equipo para las clases?",
-      "answer": "No, proporcionamos todo el equipo necesario para las clases de surf. Sin embargo, si tienes tu propia tabla o equipo, siéntete libre de traerlo."
+      "answer": "No — proporcionamos todo el equipo necesario para las clases de surf. Sin embargo, si tienes tu propia tabla o equipo, siéntete libre de traerlo."
     },
     "question3": {
       "title": "¿Cómo reservo una clase o paquete?",
-      "answer": "Puedes reservar una clase o paquete directamente a través de nuestro sitio web, contactándonos por correo electrónico o teléfono."
+      "answer": "Puedes reservar una clase o paquete directamente con nosotros por WhatsApp o Instagram."
     },
     "question4": {
       "title": "¿Dónde puedo alojarme durante mi visita?",
-      "answer": "Tenemos asociaciones con alojamientos locales y podemos ayudar a recomendar lugares para quedarte durante tu visita."
+      "answer": "Tenemos una asociación con Casa Mar Taíba (nuestra sede) y otras opciones locales; contáctanos para recomendaciones."
     }
   },
   "footer": {
@@ -205,7 +195,7 @@
       "stay": "Estancia",
       "store": "Tienda"
     },
-    "follow": "Seguinos en nuestras redes"
+    "follow": "Síguenos en nuestras redes"
   }
 
 }

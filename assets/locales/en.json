@@ -1,5 +1,5 @@
 {
-  "welcome": "Welcome",
+  "welcome": "Bem-vindo",
   "navigation": {
     "home": "Home",
     "stay": {
@@ -23,7 +23,7 @@
   },
   "sliderCarousel": {
     "slider1": {
-      "subtitle": "Stay relaxed",
+      "subtitle": "Discover our surf camp",
       "title": "Come surf with us",
       "cta": "Packages"
     },
@@ -33,14 +33,10 @@
       "cta": "Packages"
     },
     "slider3": {
-      "subtitle": "A paradise",
+      "subtitle": "Warm water all year",
       "title": "Come discover Taíba",
-      "cta": "Taiba"
+      "cta": "Packages"
     }
-  },
-  "ctaTwo": {
-    "text": "We offer personalized service with safety",
-    "button": "Get started"
   },
   "ourServices": {
     "floatedText": "SERVICES",
@@ -48,31 +44,31 @@
     "title": "WHAT WE OFFER",
     "surfLessons": {
       "header": "Surf <br> Lessons",
-      "text": "We offer surf lessons"
+      "text": "Surf lessons for all levels, from beginner to advanced"
     },
     "rentalBoards": {
       "header": "Board <br> Rental",
-      "text": "Rent boards with us"
+      "text": "We rent surfboards from longboards to small boards; choose the ideal model for you"
     },
     "film": {
       "header": "Surf <br> Coach",
-      "text": "Record your surf sessions for video analysis"
+      "text": "Personalized coaching for your surf progression; we film your sessions and review them together"
     },
     "retreats": {
       "header": "Surf <br> Retreats",
-      "text": "Weekend immersion with lots of surf, food and experiences"
+      "text": "Live surfing intensely — surf camps and immersions with great waves and good food"
     }
   },
   "coursesList": {
     "subheader": "All packages",
     "header": "Our<br> Packages",
-    "text": "All our services and packages are listed below — choose according to your level"
+    "text": "Everything we offer at NaBoa Surf Camp is listed below; choose the ideal package for you. If you didn't find what you're looking for, contact us"
   },
   "packages": {
     "package1": {
       "label": "Lesson",
       "title": "Surf Lesson",
-      "brief": "Personalized one-on-one lesson, for any level",
+      "brief": "Personalized individual lesson for any level",
       "serviceName": "avulso",
       "imageName": "avulso.png",
       "category": "surf"
@@ -80,7 +76,7 @@
     "package2": {
       "label": "Beginner",
       "title": "Beginner Package",
-      "brief": "Package for beginner surfers, includes equipment",
+      "brief": "Complete introduction to surfing; no previous experience required",
       "serviceName": "iniciante",
       "imageName": "iniciante.jpg",
       "category": "surf"
@@ -88,7 +84,7 @@
     "package3": {
       "label": "Coaching",
       "title": "Surf Coaching",
-      "brief": "Package for those with some experience, includes equipment",
+      "brief": "Personalized coaching with video analysis and lessons",
       "serviceName": "coach",
       "imageName": "coach.png",
       "category": "surf"
@@ -96,7 +92,7 @@
     "package4": {
       "label": "Boards",
       "title": "Board Rental",
-      "brief": "Rent boards with us — we have a variety of models",
+      "brief": "Rent boards with us; we have a variety of models",
       "serviceName": "aluguel",
       "imageName": "aluguel.png",
       "category": "boards"
@@ -104,7 +100,7 @@
     "package5": {
       "label": "Weekend",
       "title": "Weekend Experience",
-      "brief": "Record your surf sessions for video analysis",
+      "brief": "Package with filming for those spending the weekend",
       "serviceName": "experience",
       "imageName": "experience.png",
       "category": "surf"
@@ -113,8 +109,8 @@
   },
   "taibaSection": {
     "subheader": "learn more about our place",
-    "header": "Why Taíba?",
-    "text": "Taíba is a peaceful place with great waves",
+    "header": "Taíba — an ideal place",
+    "text": "Waves all year round in a peaceful, welcoming setting",
     "button": "Learn more"
   },
   "testimonials": {
@@ -122,60 +118,49 @@
     "header": "What they say about us",
     "testimonies": [
       {
-        "quote": "We came from São Paulo to have this wonderful experience at NaBoa Surf Camp! Professor Caio led all our lessons (three days in a row) with great care and patience, which resulted in incredible progress. Highly recommend — I plan to return!",
+        "quote": "We came from São Paulo to have this wonderful experience at NaBoa Surf Camp! Instructor Caio led all our lessons (three days straight) with great care and patience which resulted in amazing progress. Highly recommended — I plan to come back ✨🙏🍃",
         "name": "Victoria",
-        "title": "Beginner Surfer",
-        "image": "assets/images/testimonials/01.png"
+        "location": "São Paulo, SP",
+        "image": "assets/images/testimonies/01.png"
       },
       {
-        "quote": "Amazing experience, I highly recommend! Kaio is an excellent instructor and made me feel comfortable and safe during my first surf lesson. He has great technique and teaching skills — very patient and knowledgeable.",
-        "name": "Maria Oliveira",
-        "title": "Intermediate Surfer",
-        "image": "assets/images/testimonials/02.png"
+        "quote": "Incredible experience, highly recommended! Kaio is an excellent instructor and made me feel comfortable and confident during my first surf lesson. He has great technique and pedagogy — very patient and knowledgeable.",
+        "name": "Carla Tanaka",
+        "location": "Ceará, CE",
+        "image": "assets/images/testimonies/02.png"
       },
       {
-        "quote": "I take surf lessons in Fortaleza and had a private lesson with Caio that was a game changer — a wonderful experience. He teaches calmly and with excellent technique. I'll book more lessons this holiday to keep improving.",
-        "name": "Carlos Pereira",
-        "title": "Advanced Surfer",
-        "image": "assets/images/testimonials/03.png"
-      },
-      {
-        "quote": "Fantastic welcome — Kaio is a great guy who provided full support. They offer board rentals, know the local breaks and the best spots for your session! I'll be back often. P.S. They also do photo and video sessions.",
-        "name": "Ana Costa",
-        "title": "Enthusiast Surfer",
-        "image": "assets/images/testimonials/04.png"
-      },
-      {
-        "quote": "An incredible experience with a very welcoming team, comfortable service and accommodations — everyone makes the atmosphere wonderfully light, comfortable and special. I highly recommend!",
-        "name": "Lucas Fernandes",
-        "title": "Beginner Surfer",
-        "image": "assets/images/testimonials/05.png"
+        "quote": "I take surf lessons in Fortaleza and had a private lesson with Caio which was a game changer — wonderful experience. He teaches calmly and with a lot of technique; I'm booking more lessons this holiday to keep progressing.",
+        "name": "Sandy",
+        "location": "Ceará, CE",
+        "image": "assets/images/testimonies/03.png"
       },
       {
         "quote": "Amazing place in Taíba. Great energy, great people and a very welcoming vibe. Highly recommended!",
-        "name": "Lucas Fernandes",
-        "title": "Beginner Surfer",
-        "image": "assets/images/testimonials/06.png"
+        "name": "Pedro",
+        "location": "Ceará, CE",
+        "image": "assets/images/testimonies/06.png"
       },
       {
-        "quote": "Cozy environment. Very helpful staff. I'll be back soon.",
-        "name": "Lucas Fernandes",
-        "title": "Beginner Surfer",
-        "image": "assets/images/testimonials/07.png"
+        "quote": "Fantastic reception — Kaio is a really nice guy, provided us full support, offers board rentals, knows the spots and the best places for your session! I'll be back many times. P.S. They also do photo and video sessions.",
+        "name": "Edmilson",
+        "location": "Ceará, CE",
+        "image": "assets/images/testimonies/04.png"
+      },
+      {
+        "quote": "Amazing experience with a very welcoming crew, great service and comfortable accommodation — everyone makes the atmosphere light and special. Strongly recommended 👏🏼🏄‍♂️✌🏻🫶🏼",
+        "name": "Bruno",
+        "location": "Ceará, CE",
+        "image": "assets/images/testimonies/05.png"
       }
     ]
   },
   "kiteSection": {
-    "subheader": "Kitesurf practitioner?",
-    "header": "Come learn to surf too",
+    "subheader": "Do you practice kitesurf?",
+    "header": "Practice Kitesurf?",
     "sideHeader": "Learn another sport",
-    "text": "If you already practice kitesurf, come learn to surf with us in Taíba, one of the best spots in Brazil.",
+    "text": "If you already practice kitesurf, come learn to surf with us in Taíba — it fits perfectly into your routine",
     "button": "Learn more"
-  },
-  "featuresList": {
-    "feature1": "Waves all year round",
-    "feature2": "Experienced instructors",
-    "feature3": "Quality equipment"
   },
   "faq": {
     "header": "Frequently Asked Questions",
@@ -190,11 +175,11 @@
     },
     "question3": {
       "title": "How do I book a lesson or package?",
-      "answer": "You can book a lesson or package directly through our website by contacting us via email or phone."
+      "answer": "You can book a lesson or package directly with us through WhatsApp or Instagram."
     },
     "question4": {
       "title": "Where can I stay during my visit?",
-      "answer": "We have partnerships with local accommodations and can help recommend places to stay during your visit."
+      "answer": "We have a partnership with Casa Mar Taíba (our HQ) and other local options; contact us for recommendations."
     }
   },
   "footer": {

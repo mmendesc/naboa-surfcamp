@@ -32,37 +32,63 @@
   },
   "en": {
     "courseDetails": {
-      "pageTitle": "Course Details",
-      "detailLabel": "Detail",
-      "priceLabel": "$89",
-      "priceText": "Dive price",
-      "dives": "2",
-      "divesText": "Dives only",
-      "days": "4",
-      "daysText": "day course",
-      "headerTitle": "Extended Range",
-      "paragraph1": "Need something changed or is there something not quite working the way you envisaged? Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      "tipsHeader": "Diving Tips",
-      "tipsPara1": "Neque porro est qui dolorem ipsum quia quaed inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-      "tipsPara2": "When an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "breadcrumbs": {
+        "home": "Home",
+        "courses": "Services",
+        "current": "Weekend Experience"
+      },
+      "pageTitle": "Weekend Package",
+      "detailLabel": "INFO",
+      "priceLabel": "R$400",
+      "priceText": "",
+      "dives": "1",
+      "divesText": "Lesson",
+      "days": "2",
+      "daysText": "Video Analyses",
+      "headerTitle": "Details",
+      "headerImage": "assets/images/courses/experience-header.png",
+      "paragraph1": [
+        "A package for those spending the weekend in Taíba who want coaching in surfing.",
+        "Includes 2 recordings of your surf sessions for video analysis and 1 surf lesson to clarify doubts and provide in‑water help.",
+        "Depending on each surfer's level and needs, we may choose more in‑water coaching and fewer video analyses.",
+        "",
+        "Perfect for groups of friends who want the group surf analysis experience and to enjoy our facilities in Taíba.",
+        "If you're not in a group, contact us to see if you can join an existing group."
+      ],
+      "tipsHeader": "Recommendations",
+      "tipsPara1": "- We provide all necessary equipment, but if you have your own surfboard, bring it. <br> - Wear comfortable clothes and sunscreen. <br> - Arrive 15 minutes early to prepare.",
+      "tipsPara2": "Contact us below to schedule your lesson.",
       "cta": "Contact for more details"
     }
   },
   "es": {
     "courseDetails": {
-      "pageTitle": "Detalles del Curso",
-      "detailLabel": "Detalle",
-      "priceLabel": "$89",
-      "priceText": "Precio de inmersión",
-      "dives": "2",
-      "divesText": "Solo inmersiones",
-      "days": "4",
-      "daysText": "curso de días",
-      "headerTitle": "Alcance Extendido",
-      "paragraph1": "¿Necesita algo cambiado o hay algo que no funciona como imaginaba? Lorem Ipsum es simplemente texto de relleno de la industria de la tipografía.",
-      "tipsHeader": "Consejos de Buceo",
-      "tipsPara1": "Neque porro est qui dolorem ipsum quia quaed inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-      "tipsPara2": "Cuando un impresor desconocido tomó una galera de tipo y la mezcló para hacer un libro de muestras.",
+      "breadcrumbs": {
+        "home": "Inicio",
+        "courses": "Servicios",
+        "current": "Experiencia de Fin de Semana"
+      },
+      "pageTitle": "Paquete de Fin de Semana",
+      "detailLabel": "INFO",
+      "priceLabel": "R$400",
+      "priceText": "",
+      "dives": "1",
+      "divesText": "Clase",
+      "days": "2",
+      "daysText": "Análisis de Vídeo",
+      "headerTitle": "Detalles",
+      "headerImage": "assets/images/courses/experience-header.png",
+      "paragraph1": [
+        "Paquete para quienes pasan el fin de semana en Taíba y desean acompañamiento en surf.",
+        "Incluye 2 grabaciones de tus sesiones para análisis de vídeo y 1 clase de surf para resolver dudas y ofrecer ayuda en el agua.",
+        "Dependiendo del nivel y las necesidades de cada surfista, podemos optar por más acompañamiento en el agua y menos análisis de vídeo.",
+        "",
+        "Perfecto para grupos de amigos, disfrutar de la experiencia de análisis de surf en grupo y usar nuestras instalaciones en Taíba.",
+        "Si no estás en grupo, contáctanos para ver si puedes unirte a alguno ya formado."
+      ],
+      "tipsHeader": "Recomendaciones",
+      "tipsPara1": "- Proveemos todo el material necesario, pero si tienes tabla propia tráela. <br> - Usa ropa cómoda y protector solar. <br> - Llega 15 minutos antes para prepararte.",
+      "tipsPara2": "Contacta con nosotros abajo para agendar tu clase.",
       "cta": "Contacta para más detalles"
     }
   }

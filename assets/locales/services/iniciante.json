@@ -32,37 +32,63 @@
   },
   "en": {
     "courseDetails": {
-      "pageTitle": "Course Details",
-      "detailLabel": "Detail",
-      "priceLabel": "$89",
-      "priceText": "Dive price",
-      "dives": "2",
-      "divesText": "Dives only",
-      "days": "4",
-      "daysText": "day course",
-      "headerTitle": "Extended Range",
-      "paragraph1": "Need something changed or is there something not quite working the way you envisaged? Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      "tipsHeader": "Diving Tips",
-      "tipsPara1": "Neque porro est qui dolorem ipsum quia quaed inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-      "tipsPara2": "When an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "breadcrumbs": {
+        "home": "Home",
+        "courses": "Services",
+        "current": "Beginner Package"
+      },
+      "pageTitle": "Beginner Package",
+      "detailLabel": "INFO",
+      "priceLabel": "R$99",
+      "priceText": "Lessons",
+      "dives": "1",
+      "divesText": "Lesson Hour",
+      "days": "4-8",
+      "daysText": "Lessons",
+      "headerTitle": "Details",
+      "headerImage": "assets/images/courses/iniciante-header.jpg",
+      "paragraph1": [
+        "Perfect package for those who want to fully dive into surfing and experience the complete learning path.",
+        "In this package we teach the fundamentals you need to start surfing, from paddling to standing up on the board.",
+        "We start using a longboard to make the initial learning easier.",
+        "",
+        "We have 2 package types depending on your availability.",
+        "Our package focuses on your learning and progression; all lessons are recorded for analysis which helps improvement"
+      ],
+      "tipsHeader": "Recommendations",
+      "tipsPara1": "- We provide all necessary equipment, but if you have your own surfboard bring it. <br> - Wear comfortable clothes and sunscreen. <br> - Arrive 15 minutes early to prepare.",
+      "tipsPara2": "Contact us below to schedule your lesson.",
       "cta": "Contact for more details"
     }
   },
   "es": {
     "courseDetails": {
-      "pageTitle": "Detalles del Curso",
-      "detailLabel": "Detalle",
-      "priceLabel": "$89",
-      "priceText": "Precio de inmersión",
-      "dives": "2",
-      "divesText": "Solo inmersiones",
-      "days": "4",
-      "daysText": "curso de días",
-      "headerTitle": "Alcance Extendido",
-      "paragraph1": "¿Necesita algo cambiado o hay algo que no funciona como imaginaba? Lorem Ipsum es simplemente texto de relleno de la industria de la tipografía.",
-      "tipsHeader": "Consejos de Buceo",
-      "tipsPara1": "Neque porro est qui dolorem ipsum quia quaed inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-      "tipsPara2": "Cuando un impresor desconocido tomó una galera de tipo y la mezcló para hacer un libro de muestras.",
+      "breadcrumbs": {
+        "home": "Inicio",
+        "courses": "Servicios",
+        "current": "Paquete Principiante"
+      },
+      "pageTitle": "Paquete Principiante",
+      "detailLabel": "INFO",
+      "priceLabel": "R$99",
+      "priceText": "Clases",
+      "dives": "1",
+      "divesText": "Hora de clase",
+      "days": "4-8",
+      "daysText": "Clases",
+      "headerTitle": "Detalles",
+      "headerImage": "assets/images/courses/iniciante-header.jpg",
+      "paragraph1": [
+        "Paquete perfecto para quienes quieren introducirse de lleno en el surf y vivir la experiencia completa de aprendizaje.",
+        "En este paquete enseñamos toda la base que necesitas para empezar a surfear, desde remar hasta ponerte de pie en la tabla.",
+        "Comenzamos usando un longboard para facilitar el inicio del aprendizaje.",
+        "",
+        "Tenemos 2 tipos de paquetes, según tu disponibilidad de días.",
+        "Nuestro paquete se centra en tu aprendizaje y evolución; todas las clases se graban para análisis, lo que ayuda en la mejora"
+      ],
+      "tipsHeader": "Recomendaciones",
+      "tipsPara1": "- Proveemos todo el material necesario, pero si tienes tabla propia tráela. <br> - Usa ropa cómoda y protector solar. <br> - Llega 15 minutos antes para prepararte.",
+      "tipsPara2": "Contacta con nosotros abajo para agendar tu clase.",
       "cta": "Contacta para más detalles"
     }
   }

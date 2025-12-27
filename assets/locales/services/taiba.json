@@ -35,38 +35,70 @@
   },
   "en": {
     "courseDetails": {
-      "pageTitle": "Course Details",
-      "detailLabel": "Detail",
-      "priceLabel": "$89",
-      "priceText": "Dive price",
-      "dives": "2",
-      "divesText": "Dives only",
-      "days": "4",
-      "daysText": "day course",
-      "headerTitle": "Extended Range",
-      "paragraph1": "Need something changed or is there something not quite working the way you envisaged? Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      "tipsHeader": "Diving Tips",
-      "tipsPara1": "Neque porro est qui dolorem ipsum quia quaed inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-      "tipsPara2": "When an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      "cta": "Contact for more details"
+      "breadcrumbs": {
+        "home": "Início",
+        "courses": "Estadias",
+        "current": "Taíba"
+      },
+      "pageTitle": "Taíba",
+      "detailLabel": "",
+      "priceLabel": "",
+      "priceText": "",
+      "dives": "",
+      "divesText": "",
+      "days": "",
+      "daysText": "",
+      "headerTitle": "Detalhes",
+      "headerImage": "assets/images/courses/taiba.png",
+      "paragraph1": [
+        "Um pedaço do paraíso no litoral do Ceará. Apenas a 1 hora de Fortaleza e com fácil acesso.",
+        "Conhecido tanto pelo Surf quanto pelo Kitesurf, Taíba oferece ondas consistentes para todos os níveis de surfistas, desde iniciantes até avançados.",
+        "Além das ondas, Taíba é famosa por sua beleza natural e vistas de tirar o fôlego.",
+        "",
+        "Tem onda e agua quente o ano inteiro, mas a temporada de ondas vai de Janeiro a Abril/Maio, com ondulações maiores e com pouco vento, esses meses são ideais para surfistas intermédiarios e avançados.",
+        "Mas tambem recomendado para iniciantes, pois há dias com ondas pequenas e alinhadas perfeitamente para aprender a surfar.",
+        "",
+        "Durante o restante do ano, as ondas são menores e com mais presença de vento, proporcionando condições perfeitas para iniciantes no surf.",
+        "E se você pratica Kitesurf, é a oportunidade perfeita para aprendar a surfar, pois geralmente o melhor horario para surfar nessa epoca é pela manhã cedo pois há menos vento, e pela tarde o vento aumenta, ideal para kitesurf, assim você pode praticar os dois esportes no mesmo dia!"
+      ],
+      "tipsHeader": "",
+      "tipsPara1": "",
+      "tipsPara2": "",
+      "cta": "Contacte para mais detalhes"
     }
   },
   "es": {
     "courseDetails": {
-      "pageTitle": "Detalles del Curso",
-      "detailLabel": "Detalle",
-      "priceLabel": "$89",
-      "priceText": "Precio de inmersión",
-      "dives": "2",
-      "divesText": "Solo inmersiones",
-      "days": "4",
-      "daysText": "curso de días",
-      "headerTitle": "Alcance Extendido",
-      "paragraph1": "¿Necesita algo cambiado o hay algo que no funciona como imaginaba? Lorem Ipsum es simplemente texto de relleno de la industria de la tipografía.",
-      "tipsHeader": "Consejos de Buceo",
-      "tipsPara1": "Neque porro est qui dolorem ipsum quia quaed inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-      "tipsPara2": "Cuando un impresor desconocido tomó una galera de tipo y la mezcló para hacer un libro de muestras.",
-      "cta": "Contacta para más detalles"
+      "breadcrumbs": {
+        "home": "Início",
+        "courses": "Estadias",
+        "current": "Taíba"
+      },
+      "pageTitle": "Taíba",
+      "detailLabel": "",
+      "priceLabel": "",
+      "priceText": "",
+      "dives": "",
+      "divesText": "",
+      "days": "",
+      "daysText": "",
+      "headerTitle": "Detalhes",
+      "headerImage": "assets/images/courses/taiba.png",
+      "paragraph1": [
+        "Um pedaço do paraíso no litoral do Ceará. Apenas a 1 hora de Fortaleza e com fácil acesso.",
+        "Conhecido tanto pelo Surf quanto pelo Kitesurf, Taíba oferece ondas consistentes para todos os níveis de surfistas, desde iniciantes até avançados.",
+        "Além das ondas, Taíba é famosa por sua beleza natural e vistas de tirar o fôlego.",
+        "",
+        "Tem onda e agua quente o ano inteiro, mas a temporada de ondas vai de Janeiro a Abril/Maio, com ondulações maiores e com pouco vento, esses meses são ideais para surfistas intermédiarios e avançados.",
+        "Mas tambem recomendado para iniciantes, pois há dias com ondas pequenas e alinhadas perfeitamente para aprender a surfar.",
+        "",
+        "Durante o restante do ano, as ondas são menores e com mais presença de vento, proporcionando condições perfeitas para iniciantes no surf.",
+        "E se você pratica Kitesurf, é a oportunidade perfeita para aprendar a surfar, pois geralmente o melhor horario para surfar nessa epoca é pela manhã cedo pois há menos vento, e pela tarde o vento aumenta, ideal para kitesurf, assim você pode praticar os dois esportes no mesmo dia!"
+      ],
+      "tipsHeader": "",
+      "tipsPara1": "",
+      "tipsPara2": "",
+      "cta": "Contacte para mais detalhes"
     }
   }
 }

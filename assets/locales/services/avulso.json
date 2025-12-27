@@ -32,37 +32,63 @@
   },
   "en": {
     "courseDetails": {
-      "pageTitle": "Course Details",
-      "detailLabel": "Detail",
-      "priceLabel": "$89",
-      "priceText": "Dive price",
-      "dives": "2",
-      "divesText": "Dives only",
-      "days": "4",
-      "daysText": "day course",
-      "headerTitle": "Extended Range",
-      "paragraph1": "Need something changed or is there something not quite working the way you envisaged? Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      "tipsHeader": "Diving Tips",
-      "tipsPara1": "Neque porro est qui dolorem ipsum quia quaed inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-      "tipsPara2": "When an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "breadcrumbs": {
+        "home": "Home",
+        "courses": "Services",
+        "current": "Surf Lesson"
+      },
+      "pageTitle": "Surf Lesson",
+      "detailLabel": "INFO",
+      "priceLabel": "R$99",
+      "priceText": "Lesson",
+      "dives": "1",
+      "divesText": "Hour",
+      "days": "",
+      "daysText": "",
+      "headerTitle": "Details",
+      "headerImage": "assets/images/courses/avulso-header.png",
+      "paragraph1": [
+        "Private surf lesson for all levels. No prior experience required.",
+        "Have you always dreamed of surfing but never had the chance or confidence? (Answer: everyone can do it!)",
+        "We help you achieve that dream and start your surfing journey.",
+        "",
+        "If you already surf but need help improving technique, gaining confidence and feeling more comfortable in the water, this lesson is for you!",
+        "Our instructors will work with you to identify areas for improvement and adapt to your needs."
+      ],
+      "tipsHeader": "Recommendations",
+      "tipsPara1": "- We provide all required equipment, but if you own a surfboard bring it along. <br> - Wear comfortable clothes and sunscreen. <br> - Arrive 15 minutes early to prepare.",
+      "tipsPara2": "Contact us below to schedule your lesson.",
       "cta": "Contact for more details"
     }
   },
   "es": {
     "courseDetails": {
-      "pageTitle": "Detalles del Curso",
-      "detailLabel": "Detalle",
-      "priceLabel": "$89",
-      "priceText": "Precio de inmersión",
-      "dives": "2",
-      "divesText": "Solo inmersiones",
-      "days": "4",
-      "daysText": "curso de días",
-      "headerTitle": "Alcance Extendido",
-      "paragraph1": "¿Necesita algo cambiado o hay algo que no funciona como imaginaba? Lorem Ipsum es simplemente texto de relleno de la industria de la tipografía.",
-      "tipsHeader": "Consejos de Buceo",
-      "tipsPara1": "Neque porro est qui dolorem ipsum quia quaed inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-      "tipsPara2": "Cuando un impresor desconocido tomó una galera de tipo y la mezcló para hacer un libro de muestras.",
+      "breadcrumbs": {
+        "home": "Inicio",
+        "courses": "Servicios",
+        "current": "Lección de Surf"
+      },
+      "pageTitle": "Lección de Surf",
+      "detailLabel": "INFO",
+      "priceLabel": "R$99",
+      "priceText": "Lección",
+      "dives": "1",
+      "divesText": "Hora",
+      "days": "",
+      "daysText": "",
+      "headerTitle": "Detalles",
+      "headerImage": "assets/images/courses/avulso-header.png",
+      "paragraph1": [
+        "Lección de surf individual para todos los niveles. No se requiere experiencia previa.",
+        "¿Siempre has soñado con surfear pero nunca tuviste el valor o la oportunidad? (Respuesta: ¡todo el mundo puede hacerlo!)",
+        "Te ayudamos a hacer realidad ese sueño y comenzar tu camino en el surf.",
+        "",
+        "Y si ya surfes, pero aún necesitas ayuda para mejorar la técnica, ganar confianza y sentirte más cómodo en el mar, ¡esta lección también es para ti!",
+        "Nuestros instructores trabajarán contigo para identificar áreas de mejora y adaptarse a tus necesidades."
+      ],
+      "tipsHeader": "Recomendaciones",
+      "tipsPara1": "- Proveemos todo el material necesario, pero si tienes una tabla propia, tráela. <br> - Usa ropa cómoda y protector solar. <br> - Llega 15 minutos antes para prepararte.",
+      "tipsPara2": "Contacta con nosotros abajo para agendar tu lección.",
       "cta": "Contacta para más detalles"
     }
   }
