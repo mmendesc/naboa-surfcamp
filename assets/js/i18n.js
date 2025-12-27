@@ -177,6 +177,24 @@ function setStoredLanguage(lang) {
   }
 }
 
+// Try to detect the user's browser language and map it to a supported short code.
+// Returns a language code from availableLangs (e.g. 'en','es','pt') or null
+function detectBrowserLanguage() {
+  try {
+    if (typeof navigator === 'undefined') return null;
+    var sources = (navigator.languages && navigator.languages.length) ? navigator.languages : [navigator.language || navigator.userLanguage || ''];
+    for (var i = 0; i < sources.length; i++) {
+      var src = (sources[i] || '').toString();
+      // normalize like 'en-US' -> 'en'
+      var code = src.split('-')[0].toLowerCase();
+      if (availableLangs.indexOf(code) !== -1) return code;
+    }
+  } catch (e) {
+    // non-fatal
+  }
+  return null;
+}
+
 // Function to change language and persist selection
 function changeLanguage(language) {
   // i18next.changeLanguage may return a promise or accept a callback depending on version
@@ -341,8 +359,20 @@ document.addEventListener('partialsLoaded', function() {
 });
 
 
-// Determine initial language from storage or default to 'pt'
-var initialLang = getStoredLanguage() || 'pt';
+// Determine initial language:
+// - if the user previously stored a language, use it
+// - otherwise try to detect the browser language (and persist that choice)
+// - finally fall back to 'pt'
+var initialLang;
+var storedLang = getStoredLanguage();
+if (storedLang) {
+  initialLang = storedLang;
+} else {
+  var detected = detectBrowserLanguage() || 'pt';
+  // persist the detected language so subsequent visits use the same one
+  setStoredLanguage(detected);
+  initialLang = detected;
+}
 
 // Load translations from JSON files then initialize i18next
 loadTranslations().then(function(resources) {
