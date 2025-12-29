@@ -8,7 +8,7 @@
       "taiba": "Taíba"
     },
     "packages": {
-      "title": "Pacotes",
+      "title": "Serviços",
       "surf": "Surf",
       "rental": "Aluguel",
       "images": "Imagens"
@@ -25,17 +25,17 @@
     "slider1": {
       "subtitle": "Conheça nosso surfcamp",
       "title": "Venha Surfar com a gente",
-      "cta": "Pacotes"
+      "cta": "Serviços"
     },
     "slider2": {
       "subtitle": "Nao importa seu nivel",
       "title": "Do iniciante ao avancado",
-      "cta": "Pacotes"
+      "cta": "Serviços"
     },
     "slider3": {
       "subtitle": "Agua quente o ano inteiro",
       "title": "Venha Conhecer a taiba",
-      "cta": "Pacotes"
+      "cta": "Serviços"
     }
   },
   "ourServices": {
@@ -60,8 +60,8 @@
     }
   },
   "coursesList": {
-    "subheader": "Todos pacotes",
-    "header": "Nossos<br> Pacotes",
+    "subheader": "Todos Serviços",
+    "header": "Nossos<br> Serviços",
     "text": "Tudo que oferecemos na NaBoa Surf Camp está listado abaixo, escolha o pacote ideal para você <br> caso nao encontrou o que procura entre em contato com a gente"
   },
   "packages": {
@@ -186,7 +186,7 @@
     "about": "Sobre Nós",
     "explore": {
       "title": "Explorar",
-      "packages": "Pacotes",
+      "packages": "Serviços",
       "stay": "Estadia",
       "store": "Loja"
     },
