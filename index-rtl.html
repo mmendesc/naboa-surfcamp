@@ -2,6 +2,21 @@
 <html lang="en" dir="rtl">
 
 <head>
+        <meta name="google" content="notranslate">
+        <script>
+        (function(){
+            try {
+                var supported = ['en','es','pt'];
+                var stored = null;
+                try { stored = localStorage.getItem('siteLanguage'); } catch (e) { stored = null; }
+                var lang = stored || (navigator.languages && navigator.languages[0]) || navigator.language || 'pt';
+                lang = (lang + '').split('-')[0].toLowerCase();
+                if (supported.indexOf(lang) === -1) lang = 'pt';
+                document.documentElement.lang = lang;
+                document.documentElement.classList.add('notranslate');
+            } catch (e) { /* ignore */ }
+        })();
+        </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home RTL || Scubo || الغوص Centre HTML Template</title>
