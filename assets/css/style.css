@@ -4023,6 +4023,14 @@ a:focus {
 	padding-bottom: 55px;
 }
 
+/* Ensure hover helper (.hvr-sweep-to-bottom) doesn't force the content
+   to behave like inline-block and shrink; keep the content full-width. */
+.course-one__content.hvr-sweep-to-bottom {
+    display: block !important;
+    position: relative !important;
+    width: 100% !important;
+}
+
 .course-one__content::after {
 	font-family: var(--thm-font);
 	font-size: 200px;
