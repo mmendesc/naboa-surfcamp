@@ -100,9 +100,9 @@ function renderPackages() {
     packageKeys.forEach(function(key, idx) {
       var pkg = pkgObj[key];
       if (!pkg) return;
-  var imgIndex = (idx % 6) + 1; // cycle through available course images
-  var imgSrc = 'assets/images/courses/' + pkg.imageName;
-  var ctaSrc = 'course-details.html?service=' + pkg.serviceName;
+      var imgIndex = (idx % 6) + 1; // cycle through available course images
+      var imgSrc = 'assets/images/courses/' + pkg.imageName;
+      var ctaSrc = 'course-details.html?service=' + pkg.serviceName;
 
       html += '<div class="item">\n';
       html += '  <div class="course-one__single">\n';
@@ -123,32 +123,104 @@ function renderPackages() {
     });
 
     container.innerHTML = html;
-    // If this carousel was injected after theme.js ran, ensure Owl is (re)initialized
-    try {
-      if (window.jQuery) {
+
+    // If jQuery + Owl are present, (re)initialize the carousel with safe defaults
+    if (window.jQuery && window.jQuery.fn && window.jQuery.fn.owlCarousel) {
+      try {
         var $ = window.jQuery;
         var $container = $(container);
-        var opts = $container.data('options') || {};
 
+        // parse options: try jQuery data then fallback to parsing attribute
+        var opts = $container.data('options');
+        if (!opts) {
+          try { opts = JSON.parse($container.attr('data-options') || '{}'); } catch (e) { opts = {}; }
+        }
+        if (!opts || typeof opts !== 'object') opts = {};
+
+  // ensure sensible defaults
+        if (typeof opts.slideBy === 'undefined') opts.slideBy = 1;
+        if (typeof opts.autoplayTimeout === 'undefined') opts.autoplayTimeout = 5000;
+
+  // determine visible slots for current viewport (best-effort)
+        var visible = opts.items || 1;
+        if (opts.responsive && typeof opts.responsive === 'object') {
+          try {
+            var vw = window.innerWidth || document.documentElement.clientWidth || 0;
+            var bps = Object.keys(opts.responsive).map(function(k){return parseInt(k,10);}).filter(function(n){return !isNaN(n);}).sort(function(a,b){return a-b;});
+            var chosen = null;
+            for (var i = 0; i < bps.length; i++) { if (vw >= bps[i]) chosen = bps[i]; }
+            if (chosen !== null) {
+              var r = opts.responsive[chosen] || opts.responsive[String(chosen)];
+              if (r && r.items) visible = r.items;
+            } else if (opts.responsive['0'] && opts.responsive['0'].items) {
+              visible = opts.responsive['0'].items;
+            }
+          } catch (e) { /* ignore */ }
+        }
+
+        // Defensive: disable loop when total items <= visible slots to avoid clone-based jumpiness
+        if (packageKeys && packageKeys.length && packageKeys.length <= visible) {
+          opts.loop = false;
+        }
+
+        // diagnostics removed
+
+        // destroy existing instance if present
         if ($container.hasClass('owl-loaded') && $container.trigger) {
           try { $container.trigger('destroy.owl.carousel'); } catch (e) { /* ignore */ }
         }
 
-        var owl = $container.owlCarousel(opts);
+        // initialize and capture API
+        $container.owlCarousel(opts);
+        var api = $container.data('owl.carousel') || $container.data('owl');
+
+        // helper to compute current visible start index
+        function currentIndex() {
+          try { if (api && typeof api.current === 'function' && typeof api.relative === 'function') return api.relative(api.current()); } catch (e) {}
+          try { var active = $container.find('.owl-item.active').first(); if (active.length) { var all = $container.find('.owl-item').not('.cloned'); return all.index(active); } } catch (e) {}
+          return 0;
+        }
+
+        // pause/resume autoplay helpers
+        var resumeTimer = null;
+        function stopAutoplay() { try { $container.trigger('stop.owl.autoplay'); } catch (e) {} }
+        function scheduleResume() { try { if (resumeTimer) clearTimeout(resumeTimer); resumeTimer = setTimeout(function(){ try { $container.trigger('play.owl.autoplay', [opts.autoplayTimeout || 5000]); } catch(e){} }, 3000); } catch(e){} }
+
+        // precise single-step navigation using 'to' to avoid slideBy/responsive mismatches
+        function navigate(delta) {
+          try {
+            var total = packageKeys.length || ($container.find('.owl-item').not('.cloned').length);
+            var vis = (api && api.settings && api.settings.items) ? api.settings.items : visible;
+            var cur = currentIndex();
+            var tgt = cur + delta;
+            if (!opts.loop) {
+              var maxStart = Math.max(0, total - vis);
+              if (tgt < 0) tgt = 0; if (tgt > maxStart) tgt = maxStart;
+            } else {
+              tgt = ((tgt % total) + total) % total;
+            }
+            // diagnostics removed
+            stopAutoplay(); scheduleResume();
+            try { $container.trigger('to.owl.carousel', [tgt, 600]); } catch (e) { try { $container.trigger(delta>0?'next.owl.carousel':'prev.owl.carousel',[600]); } catch(e2){} }
+          } catch (e) { /* ignore */ }
+        }
 
         var prevSel = $container.data('carousel-prev-btn');
         var nextSel = $container.data('carousel-next-btn');
         if (prevSel) {
-          $(prevSel).off('click.i18nOwl').on('click.i18nOwl', function() { owl.trigger('prev.owl.carousel', [1000]); return false; });
+          try { $(prevSel).off('click'); } catch(e) {}
+          $(prevSel).off('click.i18nOwl').on('click.i18nOwl', function(e){ e && e.preventDefault && e.preventDefault(); try{ e && e.stopImmediatePropagation && e.stopImmediatePropagation(); } catch(_){} navigate(-1); return false; });
         }
         if (nextSel) {
-          $(nextSel).off('click.i18nOwl').on('click.i18nOwl', function() { owl.trigger('next.owl.carousel', [1000]); return false; });
+          try { $(nextSel).off('click'); } catch(e) {}
+          $(nextSel).off('click.i18nOwl').on('click.i18nOwl', function(e){ e && e.preventDefault && e.preventDefault(); try{ e && e.stopImmediatePropagation && e.stopImmediatePropagation(); } catch(_){} navigate(1); return false; });
         }
+
+      } catch (e) {
+        console.warn('Could not initialize packages carousel', e);
       }
-    } catch (e) {
-      // non-fatal
-      console.warn('Could not (re)initialize packages carousel', e);
     }
+
   } catch (e) {
     console.error('renderPackages error', e);
   }
