@@ -4090,6 +4090,34 @@ a:focus {
 	background-color: #063a7a;
 }
 
+/* Ensure consistent card content height on small screens so short briefs
+	 don't make the gray box collapse. We use a fixed content height on
+	 mobile and make the card a column flex container so layout stays stable. */
+@media (max-width: 767px) {
+	.course-one__single {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+	}
+	.course-one__image {
+		/* image area keeps natural height */
+		flex: 0 0 auto;
+	}
+	.course-one__content {
+		/* fixed content block height on mobile */
+		flex: 0 0 220px;
+		min-height: 220px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center; /* center short briefs vertically */
+		padding-top: 30px; /* reduce top padding slightly on mobile */
+		padding-bottom: 30px;
+	}
+	.course-one__content p {
+		width: 80%;
+	}
+}
+
 .course-one__book-link {
 	position: absolute;
 	top: 100%;
