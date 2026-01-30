@@ -6,18 +6,44 @@
   'use strict';
 
   const partials = [
+    // load promo partial first so it appears above the header
+    { id: 'promo-nav', url: '/inc/promo_nav.html' },
     { id: 'site-header', url: '/inc/header.html' },
     { id: 'site-footer', url: '/inc/footer.html' }
   ];
 
   async function fetchAndInject(part) {
-    const container = document.getElementById(part.id);
-    if (!container) return;
+    // Try to locate the target container first. For the promo partial we also
+    // support injecting it before the site header if the page doesn't include
+    // a dedicated container element.
+    let container = document.getElementById(part.id);
     try {
       const res = await fetch(part.url, { cache: 'no-cache' });
       if (!res.ok) throw new Error('HTTP ' + res.status);
       const html = await res.text();
-      container.innerHTML = html;
+
+      if (container) {
+        container.innerHTML = html;
+        return;
+      }
+
+      // special-case: if the page doesn't have an explicit promo container,
+      // inject the promo partial right before the header so it appears at the
+      // top of the page (maintains previous behavior where promo was above header).
+      if (part.id === 'promo-nav') {
+        var siteHeader = document.getElementById('site-header');
+        var wrapper = document.createElement('div');
+        wrapper.innerHTML = html;
+        if (siteHeader && siteHeader.parentNode) {
+          siteHeader.parentNode.insertBefore(wrapper, siteHeader);
+        } else if (document.body.firstChild) {
+          document.body.insertBefore(wrapper, document.body.firstChild);
+        } else {
+          document.body.appendChild(wrapper);
+        }
+        return;
+      }
+      // otherwise, nothing to do
     } catch (err) {
       console.error('Failed to load partial', part.url, err);
     }

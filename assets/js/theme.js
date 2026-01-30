@@ -501,3 +501,119 @@
     });
 
 })(jQuery);
+
+// Promo top bar animation only: the markup is provided by a partial (inc/promo_nav.html).
+// This script only wires the marquee behavior and does not insert markup.
+(function() {
+    var DEFAULT_PROMO = 'Launch promo — Book now and get 10% off!';
+
+    function getPromoTextFromMeta() {
+        try {
+            var meta = document.querySelector('meta[name="site-promo"]');
+            if (meta && meta.content && meta.content.trim()) return meta.content.trim();
+        } catch (e) {}
+        return DEFAULT_PROMO;
+    }
+
+    function initPromo() {
+        var track = document.querySelector('.promo-track');
+        if (!track) return; // partial not present on this page
+
+        // ensure promo text exists in the span; if empty, populate from meta
+        var textSpan = track.querySelector('.promo-text');
+        if (!textSpan) {
+            textSpan = document.createElement('span');
+            textSpan.className = 'promo-text';
+            track.appendChild(textSpan);
+        }
+        if (!textSpan.textContent || !textSpan.textContent.trim()) {
+            textSpan.textContent = getPromoTextFromMeta();
+        }
+
+        // initial evaluation and resize handling
+        evaluateMarquee(track);
+        var resizeTimer = null;
+        window.addEventListener('resize', function() {
+            if (resizeTimer) clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(function() { evaluateMarquee(track); }, 150);
+        });
+    }
+
+    function evaluateMarquee(track) {
+        if (!track) return;
+        var container = track.parentNode; // promo-inner
+        var textSpan = track.querySelector('.promo-text');
+        if (!textSpan) return;
+
+        // reset
+        track.classList.remove('promo-marquee', 'animate');
+        track.style.setProperty('--marquee-distance', '0px');
+        track.style.removeProperty('animation-duration');
+        track.innerHTML = '';
+
+        // create a fresh span and measure
+        var span = document.createElement('span');
+        span.className = 'promo-text';
+        span.textContent = textSpan.textContent;
+        track.appendChild(span);
+
+        var containerW = container.clientWidth;
+        var spanW = span.getBoundingClientRect().width;
+
+        // Always enable marquee (desktop and mobile). To make the loop smooth
+        // we append repeated copies of the span until the track is wide enough
+        // to scroll comfortably across the visible container.
+        track.style.whiteSpace = 'nowrap';
+        span.style.display = 'inline-block';
+
+        // add a small padding gap between repeats to avoid cramped loop
+        var gap = 48; // px (matches CSS .promo-text padding-right)
+
+        // append at least two copies (original + one clone), then more until
+        // track width >= container width * 2 (gives a comfortable continuous loop)
+        track.appendChild(span.cloneNode(true));
+        var totalW = track.getBoundingClientRect().width;
+        var attempt = 0;
+        while ((totalW < containerW * 2) && attempt < 10) {
+            // append another clone
+            track.appendChild(span.cloneNode(true));
+            totalW = track.getBoundingClientRect().width;
+            attempt++;
+        }
+
+        // distance to scroll for one cycle should be the width of a single
+        // block (one span + gap). Measure the first child to get that width.
+        var firstBlock = track.querySelector('.promo-text');
+        var blockW = firstBlock ? firstBlock.getBoundingClientRect().width : (spanW || containerW);
+        var distance = blockW + gap;
+
+        var speed = 80; // px per second (tweakable)
+        var duration = Math.max(6, Math.round(distance / speed)); // seconds
+
+        track.style.setProperty('--marquee-distance', distance + 'px');
+        track.style.animationDuration = duration + 's';
+        track.classList.add('promo-marquee');
+
+        // create keyframes if not present and start animation
+        ensurePromoKeyframes();
+        setTimeout(function() { track.classList.add('animate'); }, 10);
+    }
+
+    function ensurePromoKeyframes() {
+        var name = 'promo-scroll';
+        if (document.getElementById('promo-scroll-keyframes')) return;
+        var style = document.createElement('style');
+        style.id = 'promo-scroll-keyframes';
+        style.innerHTML = "@keyframes " + name + " { from { transform: translateX(0); } to { transform: translateX(calc(-1 * var(--marquee-distance))); } }";
+        document.head.appendChild(style);
+        var rule = ".promo-track.promo-marquee.animate { animation-name: " + name + "; animation-timing-function: linear; animation-iteration-count: infinite; }\n    .promo-track.promo-marquee { transform: translateX(0); }";
+        var s2 = document.createElement('style');
+        s2.innerHTML = rule;
+        document.head.appendChild(s2);
+    }
+
+    // Initialize when DOM ready (partial may already be present), and also after partialsLoaded
+    document.addEventListener('DOMContentLoaded', initPromo);
+    document.addEventListener('partialsLoaded', initPromo);
+
+})();

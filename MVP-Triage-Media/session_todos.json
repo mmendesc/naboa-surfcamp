@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "title": "Project setup & environment",
+    "description": "Create venv, pin dependencies, add README and sample data folder. Verify PyTorch + MPS (if Apple Silicon).",
+    "estimate_hours": 2,
+    "status": "not-started",
+    "deliverable": "requirements.txt, README.md, working venv instructions"
+  },
+  {
+    "id": 2,
+    "title": "Frame extraction proof-of-concept",
+    "description": "Implement a small script that reads a video, extracts frames at 1 fps (configurable), saves thumbnails to disk.",
+    "estimate_hours": 2,
+    "status": "not-started",
+    "deliverable": "script prototype/frame_extract.py"
+  },
+  {
+    "id": 3,
+    "title": "Person detection POC",
+    "description": "Run YOLOv8 on extracted frames, confirm person boxes and board detections; save crops and debug images.",
+    "estimate_hours": 4,
+    "status": "not-started",
+    "deliverable": "prototype/detect.py, sample crops"
+  },
+  {
+    "id": 4,
+    "title": "Tracking inside videos",
+    "description": "Integrate DeepSort/StrongSORT to produce per-video tracks (track id + frame range + average bbox).",
+    "estimate_hours": 6,
+    "status": "not-started",
+    "deliverable": "prototype/track.py (per-video track JSON)"
+  },
+  {
+    "id": 5,
+    "title": "Embedding extraction (re-id)",
+    "description": "Extract person re-id embeddings (OSNet) for each track, average per-track embeddings and store them.",
+    "estimate_hours": 6,
+    "status": "not-started",
+    "deliverable": "prototype/embed.py (embeddings per track JSON)"
+  },
+  {
+    "id": 6,
+    "title": "Surfboard descriptor (optional MVP boost)",
+    "description": "Crop probable surfboard regions, compute color histograms and a small CNN embedding; store with track data.",
+    "estimate_hours": 4,
+    "status": "not-started",
+    "deliverable": "prototype/board_features.py"
+  },
+  {
+    "id": 7,
+    "title": "Cross-video clustering",
+    "description": "Cluster track-level embeddings across videos (DBSCAN/Agglomerative) and produce candidate groups with confidence scores.",
+    "estimate_hours": 4,
+    "status": "not-started",
+    "deliverable": "prototype/cluster.py (groups JSON)"
+  },
+  {
+    "id": 8,
+    "title": "Simple review UI (Streamlit)",
+    "description": "Create a Streamlit app to show clusters, thumbnails, allow accept/merge/split and export groups as folders/symlinks.",
+    "estimate_hours": 8,
+    "status": "not-started",
+    "deliverable": "ui/streamlit_app.py"
+  },
+  {
+    "id": 9,
+    "title": "End-to-end run and test",
+    "description": "Run the full pipeline on a sample SD folder, measure runtime, adjust sampling and thresholds.",
+    "estimate_hours": 6,
+    "status": "not-started",
+    "deliverable": "benchmark notes + tuned config"
+  },
+  {
+    "id": 10,
+    "title": "Polish & packaging (optional)",
+    "description": "Wrap prototype into a simple macOS bundle (pyinstaller / py2app or package backend + Tauri UI).",
+    "estimate_hours": 8,
+    "status": "not-started",
+    "deliverable": "packaged app + install instructions"
+  }
+]

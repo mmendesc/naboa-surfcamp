@@ -6269,3 +6269,55 @@ a:focus {
 	line-height: 34px;
 	color: #828690;
 }
+
+/* Promo top bar */
+.promo-top-bar {
+	width: 100%;
+	/* use the theme primary (yellow) to attract attention while staying
+	   harmonious with the site's palette. Dark text improves contrast. */
+	background: var(--thm-primary);
+	color: var(--thm-black);
+	font-weight: 700;
+	font-size: 15px; /* slightly larger */
+	line-height: 1;
+	z-index: 9999;
+	box-shadow: 0 2px 6px rgba(5,27,53,0.08);
+}
+.promo-top-bar .promo-inner {
+	/* full-width track so marquee spans viewport; increased vertical
+	   padding to make the bar a bit taller without being obtrusive */
+	width: 100%;
+	max-width: none;
+	padding: 12px 18px;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+.promo-top-bar .promo-track {
+	display: block;
+	white-space: nowrap;
+	position: relative;
+}
+.promo-top-bar .promo-text {
+	display: inline-block;
+	padding-right: 48px; /* spacing between repeats when duplicated */
+	color: var(--thm-black);
+}
+
+/* marquee animation when active: we translate the track left by the width of the first text block */
+.promo-track.promo-marquee {
+	will-change: transform;
+}
+.promo-track.promo-marquee .promo-inner-track {
+	display: inline-block;
+}
+.promo-track.promo-marquee.animate {
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+/* small-screen tweak: keep bar relatively compact */
+@media (max-width: 767px) {
+	/* increase height and text on small screens for better tap/readability */
+	.promo-top-bar .promo-inner { padding: 16px 12px; }
+	.promo-top-bar { font-size: 16px; line-height: 1.1; }
+}
