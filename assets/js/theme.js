@@ -518,6 +518,7 @@
     function initPromo() {
         var track = document.querySelector('.promo-track');
         if (!track) return; // partial not present on this page
+        var container = track.parentNode; // promo-inner
 
         // ensure promo text exists in the span; if empty, populate from meta
         var textSpan = track.querySelector('.promo-text');
@@ -526,8 +527,20 @@
             textSpan.className = 'promo-text';
             track.appendChild(textSpan);
         }
-        if (!textSpan.textContent || !textSpan.textContent.trim()) {
-            textSpan.textContent = getPromoTextFromMeta();
+
+        // Prefer the (translated) source if present. The partial includes a
+        // hidden `.promo-src` element (populated by translateAllElements), so
+        // read from it when available. Otherwise fall back to meta/default.
+        try {
+            // read translated source placed by i18n.js into .promo-src
+            var src = container && container.querySelector ? container.querySelector('.promo-src') : null;
+            if (src && src.textContent && src.textContent.trim()) {
+                textSpan.textContent = src.textContent.trim();
+            } else if (!textSpan.textContent || !textSpan.textContent.trim()) {
+                textSpan.textContent = getPromoTextFromMeta();
+            }
+        } catch (e) {
+            if (!textSpan.textContent || !textSpan.textContent.trim()) textSpan.textContent = getPromoTextFromMeta();
         }
 
         // initial evaluation and resize handling
@@ -615,5 +628,10 @@
     // Initialize when DOM ready (partial may already be present), and also after partialsLoaded
     document.addEventListener('DOMContentLoaded', initPromo);
     document.addEventListener('partialsLoaded', initPromo);
+
+    // Re-run initPromo after translations are applied. i18n.js will dispatch
+    // a `translationsApplied` event after it runs translateAllElements(). This
+    // keeps theme.js agnostic to i18next internals and data-translate.
+    document.addEventListener('translationsApplied', initPromo);
 
 })();

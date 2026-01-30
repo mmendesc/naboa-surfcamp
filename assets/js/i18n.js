@@ -77,6 +77,8 @@ function translateAllElements() {
       el.innerHTML = i18next.t(key, {'interpolation': {'escapeValue': false}, joinArrays: ' <br>'});
     }
   });
+  // Notify other modules that translations were applied so they can react
+  try { document.dispatchEvent(new Event('translationsApplied')); } catch (e) { /* ignore */ }
 }
 
 // Render the packages carousel items based on translations

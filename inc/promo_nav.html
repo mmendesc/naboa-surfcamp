@@ -1,6 +1,11 @@
 <!-- Promo partial: simple markup only. The animation is handled by assets/js/theme.js -->
 <div class="promo-top-bar">
   <div class="promo-inner">
+    <!-- Hidden source element used by i18n.translateAllElements to insert translated text.
+         theme.js reads the rendered textContent from this element (it does not inspect
+         data-* attributes). Keeping it outside the marquee track prevents the
+         marquee logic from removing the translation source when it clones nodes. -->
+    <span class="promo-src" data-translate="promoText" style="display:none"></span>
     <div class="promo-track">
       <span class="promo-text"></span>
     </div>

@@ -27,23 +27,11 @@
         return;
       }
 
-      // special-case: if the page doesn't have an explicit promo container,
-      // inject the promo partial right before the header so it appears at the
-      // top of the page (maintains previous behavior where promo was above header).
-      if (part.id === 'promo-nav') {
-        var siteHeader = document.getElementById('site-header');
-        var wrapper = document.createElement('div');
-        wrapper.innerHTML = html;
-        if (siteHeader && siteHeader.parentNode) {
-          siteHeader.parentNode.insertBefore(wrapper, siteHeader);
-        } else if (document.body.firstChild) {
-          document.body.insertBefore(wrapper, document.body.firstChild);
-        } else {
-          document.body.appendChild(wrapper);
-        }
-        return;
-      }
-      // otherwise, nothing to do
+      // If there's no container for this partial, don't inject it.
+      // The promo (`promo-nav`) should only appear on pages that include
+      // an explicit `<div id="promo-nav"></div>` placeholder — no fallback
+      // insertion. This prevents the promo from showing site-wide.
+      return;
     } catch (err) {
       console.error('Failed to load partial', part.url, err);
     }
