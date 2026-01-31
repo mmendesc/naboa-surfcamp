@@ -77,6 +77,27 @@ function translateAllElements() {
       el.innerHTML = i18next.t(key, {'interpolation': {'escapeValue': false}, joinArrays: ' <br>'});
     }
   });
+  // Update whatsapp links which use data-whatsapp-key + data-phone attributes
+  try {
+    var waEls = document.querySelectorAll('[data-whatsapp-key]');
+    Array.prototype.forEach.call(waEls, function(el) {
+      try {
+        var key = el.getAttribute('data-whatsapp-key');
+        var phone = el.getAttribute('data-phone') || '';
+        var msg = '';
+        if (key && i18next && typeof i18next.t === 'function') {
+          msg = i18next.t(key, { defaultValue: '' });
+        }
+        var encoded = encodeURIComponent(msg || '');
+        // prefer web intent URL
+        var href = 'https://api.whatsapp.com/send?phone=' + encodeURIComponent(phone) + (encoded ? '&text=' + encoded : '');
+        el.setAttribute('href', href);
+        // ensure opens in new tab
+        el.setAttribute('target', '_blank');
+      } catch (e) { /* ignore element-specific errors */ }
+    });
+  } catch (e) { /* ignore */ }
+
   // Notify other modules that translations were applied so they can react
   try { document.dispatchEvent(new Event('translationsApplied')); } catch (e) { /* ignore */ }
 }
