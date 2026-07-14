@@ -1,0 +1,82 @@
+[
+  {
+    "slug": "taiba-weekend-immersion",
+    "title": "Taiba Weekend Immersion",
+    "destination": "Taiba, Ceara",
+    "date": "2026-08-15",
+    "spots": 12,
+    "spotsTaken": 5,
+    "packageIncludes": [
+      "Two guided surf sessions",
+      "Board rental during sessions",
+      "Video analysis with coach",
+      "Breakfast at the surf camp"
+    ],
+    "packageExcludes": [
+      "Accommodation",
+      "Airport transfer",
+      "Lunch and dinner"
+    ],
+    "registrationUrl": "https://api.whatsapp.com/send?phone=558598465773&text=Hi%21%20I%20want%20to%20register%20for%20the%20Taiba%20Weekend%20Immersion.",
+    "surferLevel": "Beginner to intermediate",
+    "price": "R$ 690",
+    "paymentMethods": [
+      "Pix",
+      "Credit card",
+      "Cash"
+    ]
+  },
+  {
+    "slug": "paracuru-point-break-trip",
+    "title": "Paracuru Point Break Trip",
+    "destination": "Paracuru, Ceara",
+    "date": "2026-09-05",
+    "spots": 8,
+    "spotsTaken": 2,
+    "packageIncludes": [
+      "Transport from Taiba",
+      "Local spot guidance",
+      "Three-hour surf session",
+      "Photos from the session"
+    ],
+    "packageExcludes": [
+      "Meals",
+      "Board rental",
+      "Personal travel insurance"
+    ],
+    "registrationUrl": "https://api.whatsapp.com/send?phone=558598465773&text=Hi%21%20I%20want%20to%20register%20for%20the%20Paracuru%20Point%20Break%20Trip.",
+    "surferLevel": "Intermediate",
+    "price": "R$ 420",
+    "paymentMethods": [
+      "Pix",
+      "Credit card"
+    ]
+  },
+  {
+    "slug": "icarai-advanced-surf-camp",
+    "title": "Icarai Advanced Surf Camp",
+    "destination": "Icarai de Amontada, Ceara",
+    "date": "2026-10-12",
+    "spots": 10,
+    "spotsTaken": 7,
+    "packageIncludes": [
+      "Three nights of accommodation",
+      "Daily surf coaching",
+      "Video analysis",
+      "Breakfast and welcome dinner"
+    ],
+    "packageExcludes": [
+      "Flights",
+      "Airport transfer",
+      "Extra meals",
+      "Personal equipment"
+    ],
+    "registrationUrl": "https://api.whatsapp.com/send?phone=558598465773&text=Hi%21%20I%20want%20to%20register%20for%20the%20Icarai%20Advanced%20Surf%20Camp.",
+    "surferLevel": "Intermediate to advanced",
+    "price": "R$ 1,890",
+    "paymentMethods": [
+      "Pix",
+      "Credit card installments"
+    ]
+  }
+]

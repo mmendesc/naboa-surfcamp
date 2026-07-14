@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta name="google" content="notranslate">
+    <script>
+    (function(){
+        try {
+            var supported = ['en','es','pt'];
+            var stored = null;
+            try { stored = localStorage.getItem('siteLanguage'); } catch (e) { stored = null; }
+            var lang = stored || (navigator.languages && navigator.languages[0]) || navigator.language || 'pt';
+            lang = (lang + '').split('-')[0].toLowerCase();
+            if (supported.indexOf(lang) === -1) lang = 'pt';
+            document.documentElement.lang = lang;
+            document.documentElement.classList.add('notranslate');
+        } catch (e) { /* ignore */ }
+    })();
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HWVRX82ERT"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-HWVRX82ERT');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NaBoa Surf Camp - Surf Trip</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/naboa-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/naboa-16.png">
+    <link rel="manifest" href="assets/images/favicon/site.webmanifest">
+
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:300,400,500,600,700,800%7CUbuntu:400,500,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/hover-min.css">
+    <link rel="stylesheet" href="assets/css/scubo-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+    <div class="preloader">
+        <img src="assets/images/preloader.png" class="preloader__image" alt="">
+    </div>
+    <div class="page-wrapper">
+        <div id="site-header"></div>
+
+        <section class="page-header">
+            <div class="page-header__bg" style="background-image: url(assets/images/background/footer-bg-1-1.jpg);"></div>
+            <div class="container">
+                <ul class="list-unstyled thm-breadcrumb">
+                    <li><a href="index.html" data-translate="navigation.home">Home</a></li>
+                    <li><a href="surf-trips.html" data-translate="surfTrips.pageTitle">Surf Trips</a></li>
+                    <li class="active"><a href="#" data-translate="surfTrips.detailsTitle">Trip Details</a></li>
+                </ul>
+                <h2 class="page-header__title" data-translate="surfTrips.detailsTitle">Trip Details</h2>
+            </div>
+        </section>
+
+        <section class="course-details surf-trip-detail">
+            <div class="container" id="surf-trip-detail"></div>
+        </section>
+
+        <div id="site-footer"></div>
+    </div>
+
+    <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/bootstrap-datepicker.min.js"></script>
+    <script src="assets/js/bootstrap-select.min.js"></script>
+    <script src="assets/js/isotope.js"></script>
+    <script src="assets/js/jquery.ajaxchimp.min.js"></script>
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="assets/js/jquery.validate.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/TweenMax.min.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="https://unpkg.com/i18next@25.3.2/dist/umd/i18next.js"></script>
+    <script src="assets/js/partials.js"></script>
+    <script src="assets/js/i18n.js"></script>
+    <script src="assets/js/trips.js"></script>
+    <script src="assets/js/theme.js"></script>
+</body>
+
+</html>

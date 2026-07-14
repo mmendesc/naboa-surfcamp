@@ -18,6 +18,7 @@
     "about": {
       "title": "Sobre"
     },
+    "surfTrips": "Surf Trips",
     "store": {
       "title": "Loja"
     },
@@ -182,6 +183,32 @@
     "question4": {
       "title": "Onde posso me hospedar durante minha estadia?",
       "answer": "Temos parceria com a Casa Mar Taíba, onde fica a sede do nosso surf camp, caso esteja lotada ou prefira outras opções sem problema. As aulas ocorrem normalmente e nosso ponto de encontro é na nossa sede dentro da Casa Mar."
+    }
+  },
+  "surfTrips": {
+    "pageTitle": "Surf Trips",
+    "listSubtitle": "Próximas viagens",
+    "listTitle": "Próximas<br> Surf Trips",
+    "listText": "Confira as próximas viagens da NaBoa e reserve sua vaga.",
+    "detailsTitle": "Detalhes da viagem",
+    "detailsSubtitle": "Surf trip agendada",
+    "cta": "Inscrever-se",
+    "viewDetails": "Ver detalhes",
+    "backToTrips": "Voltar para viagens",
+    "empty": "Nenhuma surf trip está agendada no momento. Volte em breve.",
+    "notFound": "Não encontramos esta surf trip.",
+    "loadError": "Não conseguimos carregar as surf trips agora.",
+    "fields": {
+      "destination": "Destino",
+      "date": "Data",
+      "spots": "Vagas",
+      "availableSpots": "Vagas disponíveis",
+      "spotsTaken": "Vagas preenchidas",
+      "packageIncludes": "O pacote inclui",
+      "packageExcludes": "O pacote não inclui",
+      "surferLevel": "Nível de surf",
+      "price": "Preço",
+      "paymentMethods": "Formas de pagamento"
     }
   },
   "footer": {

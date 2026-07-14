@@ -18,6 +18,7 @@
     "about": {
       "title": "Sobre"
     },
+    "surfTrips": "Surf Trips",
     "store": {
       "title": "Tienda"
     },
@@ -187,6 +188,32 @@
     "question4": {
       "title": "¿Dónde puedo alojarme durante mi visita?",
       "answer": "Tenemos una asociación con Casa Mar Taíba (nuestra sede) y otras opciones locales; contáctanos para recomendaciones."
+    }
+  },
+  "surfTrips": {
+    "pageTitle": "Surf Trips",
+    "listSubtitle": "Próximos viajes",
+    "listTitle": "Próximas<br> Surf Trips",
+    "listText": "Consulta los próximos viajes de NaBoa y reserva tu plaza.",
+    "detailsTitle": "Detalles del viaje",
+    "detailsSubtitle": "Surf trip programada",
+    "cta": "Inscribirse",
+    "viewDetails": "Ver detalles",
+    "backToTrips": "Volver a los viajes",
+    "empty": "No hay surf trips programadas en este momento. Vuelve pronto.",
+    "notFound": "No encontramos esta surf trip.",
+    "loadError": "No pudimos cargar las surf trips ahora.",
+    "fields": {
+      "destination": "Destino",
+      "date": "Fecha",
+      "spots": "Plazas",
+      "availableSpots": "Plazas disponibles",
+      "spotsTaken": "Plazas ocupadas",
+      "packageIncludes": "El paquete incluye",
+      "packageExcludes": "El paquete no incluye",
+      "surferLevel": "Nivel de surf",
+      "price": "Precio",
+      "paymentMethods": "Métodos de pago"
     }
   },
   "footer": {
