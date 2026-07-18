@@ -104,6 +104,10 @@
     return 'surf-trip.html?trip=' + encodeURIComponent(trip.slug || '');
   }
 
+  function tripImage(trip) {
+    return (trip && trip.headerImage) ? trip.headerImage : fallbackImage;
+  }
+
   function renderMessage(container, message) {
     container.innerHTML = '<div class="col-12"><div class="surf-trips__message">' + escapeHtml(message) + '</div></div>';
   }
@@ -135,7 +139,7 @@
         html += '    <div class="course-one__image">\n';
         html += '      <a href="' + href + '" class="course-one__cat">' + escapeHtml(formatDate(trip.date, lang)) + '</a>\n';
         html += '      <div class="course-one__image-inner">\n';
-        html += '        <img src="' + fallbackImage + '" alt="">\n';
+        html += '        <img src="' + escapeHtml(tripImage(trip)) + '" alt="">\n';
         html += '        <a href="' + href + '"><i class="scubo-icon-plus-symbol"></i></a>\n';
         html += '      </div>\n';
         html += '    </div>\n';
@@ -249,7 +253,7 @@
       var html = '';
 
       html += '<div class="course-details__image surf-trip-detail__image">';
-      html += '<img src="' + fallbackImage + '" alt="">';
+      html += '<img src="' + escapeHtml(tripImage(trip)) + '" alt="">';
       html += '</div>';
       html += '<div class="course-details__content surf-trip-detail__content">';
       html += '<div class="surf-trip-detail__hero-panel">';

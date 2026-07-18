@@ -9,7 +9,8 @@
     // load promo partial first so it appears above the header
     { id: 'promo-nav', url: '/inc/promo_nav.html' },
     { id: 'site-header', url: '/inc/header.html' },
-    { id: 'site-footer', url: '/inc/footer.html' }
+    { id: 'site-footer', url: '/inc/footer.html' },
+    { id: 'whatsapp-float', url: '/inc/whatsapp_float.html', global: true }
   ];
 
   async function fetchAndInject(part) {
@@ -24,6 +25,11 @@
 
       if (container) {
         container.innerHTML = html;
+        return;
+      }
+
+      if (part.global) {
+        document.body.insertAdjacentHTML('beforeend', html);
         return;
       }
 

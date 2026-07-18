@@ -1007,3 +1007,43 @@
         width: 100%;
     }
 }
+
+.course-one__carousel .course-one__image-inner {
+    height: 260px;
+}
+
+.course-one__carousel .course-one__image-inner>img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.surf-trip-card .course-one__image-inner {
+    height: 360px;
+}
+
+.surf-trip-card .course-one__image-inner>img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media (max-width: 991px) {
+    .course-one__carousel .course-one__image-inner {
+        height: 240px;
+    }
+
+    .surf-trip-card .course-one__image-inner {
+        height: 300px;
+    }
+}
+
+@media (max-width: 575px) {
+    .course-one__carousel .course-one__image-inner {
+        height: 220px;
+    }
+
+    .surf-trip-card .course-one__image-inner {
+        height: 240px;
+    }
+}

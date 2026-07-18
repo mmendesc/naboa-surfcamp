@@ -285,13 +285,32 @@
             e.preventDefault();
         });
     }
+    var scrollToTopHideTimer;
+
+    function setFloatingWhatsappRaised(isRaised) {
+        $('.whatsapp-float').toggleClass('whatsapp-float--raised', isRaised);
+    }
+
+    function hideScrollToTop() {
+        $('.scroll-to-top').fadeOut(500);
+        setFloatingWhatsappRaised(false);
+    }
+
+    document.addEventListener('partialsLoaded', function () {
+        setFloatingWhatsappRaised($('.scroll-to-top').is(':visible'));
+    });
+
     $(window).on('scroll', function () {
         if ($('.scroll-to-top').length) {
             var strickyScrollPos = 100;
             if ($(window).scrollTop() > strickyScrollPos) {
-                $('.scroll-to-top').fadeIn(500);
+                $('.scroll-to-top').stop(true, true).fadeIn(500);
+                setFloatingWhatsappRaised(true);
+                clearTimeout(scrollToTopHideTimer);
+                scrollToTopHideTimer = setTimeout(hideScrollToTop, 1500);
             } else if ($(this).scrollTop() <= strickyScrollPos) {
-                $('.scroll-to-top').fadeOut(500);
+                clearTimeout(scrollToTopHideTimer);
+                hideScrollToTop();
             }
         }
         if ($('.stricked-menu').length) {

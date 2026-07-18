@@ -2,6 +2,7 @@
   {
     "slug": "taiba-weekend-immersion",
     "title": "Inmersion de Fin de Semana en Taiba",
+    "headerImage": "assets/images/background/taiba-1.png",
     "destination": "Taiba, Ceara",
     "date": "2026-08-15",
     "spots": 12,
@@ -29,6 +30,7 @@
   {
     "slug": "paracuru-point-break-trip",
     "title": "Trip Point Break Paracuru",
+    "headerImage": "assets/images/background/banner-2.png",
     "destination": "Paracuru, Ceara",
     "date": "2026-09-05",
     "spots": 8,
@@ -55,6 +57,7 @@
   {
     "slug": "icarai-advanced-surf-camp",
     "title": "Surf Camp Avanzado en Icarai",
+    "headerImage": "assets/images/background/SITE 05.png",
     "destination": "Icarai de Amontada, Ceara",
     "date": "2026-10-12",
     "spots": 10,
