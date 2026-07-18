@@ -127,6 +127,8 @@
       sortedTrips.forEach(function(trip) {
         var href = tripUrl(trip);
         var remaining = availableSpots(trip);
+        var totalSpots = parseInt(trip.spots, 10);
+        var availability = escapeHtml(remaining) + '/' + escapeHtml(isNaN(totalSpots) ? '' : totalSpots);
 
         html += '<div class="col-lg-4 col-md-6">\n';
         html += '  <div class="course-one__single surf-trip-card">\n';
@@ -140,7 +142,7 @@
         html += '    <div class="course-one__content hvr-sweep-to-bottom">\n';
         html += '      <h3><a href="' + href + '">' + escapeHtml(trip.title || '') + '</a></h3>\n';
         html += '      <p>' + escapeHtml(trip.destination || '') + '</p>\n';
-        html += '      <div class="surf-trip-card__meta">' + escapeHtml(t('surfTrips.fields.availableSpots', 'Available spots')) + ': ' + escapeHtml(remaining) + '</div>\n';
+        html += '      <div class="surf-trip-card__meta">' + escapeHtml(t('surfTrips.fields.availableSpots', 'Available spots')) + ': ' + availability + '</div>\n';
         html += '    </div>\n';
         html += '    <a href="' + href + '" class="course-one__book-link">' + escapeHtml(t('surfTrips.viewDetails', 'View details')) + '</a>\n';
         html += '  </div>\n';
@@ -159,6 +161,32 @@
     return '<div class="surf-trip-detail__item"><span>' + escapeHtml(t(labelKey, fallback)) + '</span><strong>' + escapeHtml(value) + '</strong></div>';
   }
 
+  function badgeBlock(labelKey, fallback, value) {
+    if (!value && value !== 0) return '';
+    return '<div class="surf-trip-detail__badge"><span>' + escapeHtml(t(labelKey, fallback)) + '</span><strong>' + escapeHtml(value) + '</strong></div>';
+  }
+
+  function availabilityBlock(trip) {
+    var spots = parseInt(trip.spots, 10);
+    var remaining = availableSpots(trip);
+    var total = isNaN(spots) ? '' : spots;
+    var percent = 0;
+
+    if (!isNaN(spots) && spots > 0 && remaining !== '') {
+      percent = Math.max(0, Math.min(100, (parseInt(remaining, 10) / spots) * 100));
+    }
+
+    return '<div class="surf-trip-detail__availability">'
+      + '<div class="surf-trip-detail__availability-head">'
+      + '<span>' + escapeHtml(t('surfTrips.fields.availableSpots', 'Available spots')) + '</span>'
+      + '<strong>' + escapeHtml(remaining) + '/' + escapeHtml(total) + '</strong>'
+      + '</div>'
+      + '<div class="surf-trip-detail__progress" aria-hidden="true">'
+      + '<span style="width: ' + percent + '%;"></span>'
+      + '</div>'
+      + '</div>';
+  }
+
   function listBlock(labelKey, fallback, values) {
     if (!Array.isArray(values) || !values.length) return '';
 
@@ -167,6 +195,26 @@
       html += '<li>' + escapeHtml(value) + '</li>';
     });
     html += '</ul></div>';
+    return html;
+  }
+
+  function packageComparisonBlock(trip) {
+    var includes = listBlock('surfTrips.fields.packageIncludes', 'Package includes', trip.packageIncludes);
+    var excludes = listBlock('surfTrips.fields.packageExcludes', 'Package excludes', trip.packageExcludes);
+
+    if (!includes && !excludes) return '';
+
+    return '<div class="surf-trip-detail__package-comparison">' + includes + excludes + '</div>';
+  }
+
+  function paymentMethodsBlock(values) {
+    if (!Array.isArray(values) || !values.length) return '';
+
+    var html = '<div class="surf-trip-detail__payments"><h4>' + escapeHtml(t('surfTrips.fields.paymentMethods', 'Payment methods')) + '</h4><div class="surf-trip-detail__payments-grid">';
+    values.forEach(function(value) {
+      html += '<span>' + escapeHtml(value) + '</span>';
+    });
+    html += '</div></div>';
     return html;
   }
 
@@ -197,7 +245,6 @@
 
       document.title = 'NaBoa Surf Camp - ' + (trip.title || t('surfTrips.pageTitle', 'Surf Trips'));
 
-      var remaining = availableSpots(trip);
       var registerUrl = trip.registrationUrl || '#';
       var html = '';
 
@@ -205,21 +252,24 @@
       html += '<img src="' + fallbackImage + '" alt="">';
       html += '</div>';
       html += '<div class="course-details__content surf-trip-detail__content">';
+      html += '<div class="surf-trip-detail__hero-panel">';
+      html += '<div class="surf-trip-detail__intro">';
       html += '<a href="surf-trips.html" class="surf-trip-detail__back">' + escapeHtml(t('surfTrips.backToTrips', 'Back to trips')) + '</a>';
       html += '<h3>' + escapeHtml(trip.title || '') + '</h3>';
-      html += '<div class="surf-trip-detail__grid">';
-      html += valueBlock('surfTrips.fields.destination', 'Destination', trip.destination);
-      html += valueBlock('surfTrips.fields.date', 'Date', formatDate(trip.date, lang));
-      html += valueBlock('surfTrips.fields.surferLevel', 'Surfer level', trip.surferLevel);
-      html += valueBlock('surfTrips.fields.price', 'Price', trip.price);
-      html += valueBlock('surfTrips.fields.spots', 'Spots', trip.spots);
-      html += valueBlock('surfTrips.fields.spotsTaken', 'Spots taken', trip.spotsTaken);
-      html += valueBlock('surfTrips.fields.availableSpots', 'Available spots', remaining);
+      html += '<div class="surf-trip-detail__badges">';
+      html += badgeBlock('surfTrips.fields.destination', 'Destination', trip.destination);
+      html += badgeBlock('surfTrips.fields.date', 'Date', formatDate(trip.date, lang));
+      html += badgeBlock('surfTrips.fields.surferLevel', 'Surfer level', trip.surferLevel);
       html += '</div>';
-      html += listBlock('surfTrips.fields.packageIncludes', 'Package includes', trip.packageIncludes);
-      html += listBlock('surfTrips.fields.packageExcludes', 'Package excludes', trip.packageExcludes);
-      html += listBlock('surfTrips.fields.paymentMethods', 'Payment methods', trip.paymentMethods);
-      html += '<a href="' + escapeHtml(registerUrl) + '" class="thm-btn course-details__btn" target="_blank" rel="noopener">' + escapeHtml(t('surfTrips.cta', 'Register')) + '</a>';
+      html += '</div>';
+      html += '<aside class="surf-trip-detail__booking">';
+      html += valueBlock('surfTrips.fields.price', 'Price', trip.price);
+      html += availabilityBlock(trip);
+      html += '<a href="' + escapeHtml(registerUrl) + '" class="thm-btn surf-trip-detail__booking-btn" target="_blank" rel="noopener">' + escapeHtml(t('surfTrips.cta', 'Register')) + '</a>';
+      html += '</aside>';
+      html += '</div>';
+      html += packageComparisonBlock(trip);
+      html += paymentMethodsBlock(trip.paymentMethods);
       html += '</div>';
 
       container.innerHTML = html;

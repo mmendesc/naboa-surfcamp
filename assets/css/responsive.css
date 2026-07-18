@@ -84,6 +84,19 @@
         padding-top: 70px;
     }
 
+    .page-header--compact {
+        padding-top: 38px;
+    }
+
+    .page-header--compact .container {
+        padding-bottom: 26px;
+    }
+
+    .page-header--compact .page-header__title {
+        font-size: 36px;
+        line-height: 1;
+    }
+
     .course-details__infos {
         bottom: 0;
         top: auto;
@@ -881,5 +894,116 @@
 
     .cta-three {
         padding-top: 40px; /* reduce extra spacing when stacked */
+    }
+}
+
+.surf-trip-detail .course-details__content {
+    padding-top: 0;
+}
+
+@media (max-width: 767px) {
+    .surf-trip-detail {
+        padding-top: 28px;
+        padding-bottom: 44px;
+    }
+
+    .surf-trip-detail__image {
+        margin-bottom: 16px;
+    }
+
+    .surf-trip-detail__image>img {
+        height: 190px;
+    }
+
+    .surf-trip-detail__back {
+        margin-bottom: 12px;
+    }
+
+    .surf-trip-detail__hero-panel {
+        gap: 18px;
+        margin-bottom: 28px;
+        padding: 24px 16px 20px;
+    }
+
+    .surf-trip-detail__content h3 {
+        font-size: 34px;
+        line-height: 1;
+        margin-bottom: 24px;
+        overflow-wrap: anywhere;
+    }
+
+    .surf-trip-detail__badges {
+        gap: 12px;
+        grid-template-columns: 1fr;
+    }
+
+    .surf-trip-detail__badge,
+    .surf-trip-detail__item {
+        padding: 16px;
+    }
+
+    .surf-trip-detail__booking {
+        padding: 20px 16px;
+    }
+
+    .surf-trip-detail__booking .surf-trip-detail__item strong {
+        font-size: 28px;
+    }
+
+    .surf-trip-detail__availability-head {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .surf-trip-detail__availability-head strong {
+        font-size: 28px;
+    }
+
+    .surf-trip-detail__booking-btn {
+        align-self: stretch;
+        display: block;
+        padding-left: 12px;
+        padding-right: 12px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .surf-trip-detail__grid {
+        gap: 14px;
+        margin-bottom: 28px;
+    }
+
+    .surf-trip-detail__package-comparison,
+    .surf-trip-detail__list,
+    .surf-trip-detail__payments {
+        margin-top: 24px;
+    }
+
+    .surf-trip-detail__package-comparison {
+        gap: 18px;
+        grid-template-columns: 1fr;
+    }
+
+    .surf-trip-detail__list h4 {
+        overflow-wrap: anywhere;
+    }
+
+    .surf-trip-detail__payments {
+        padding: 20px 16px;
+    }
+
+    .surf-trip-detail__payments-grid {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 1fr;
+    }
+
+    .surf-trip-detail__payments-grid span {
+        align-items: center;
+        display: flex;
+        min-width: 0;
+        overflow-wrap: anywhere;
+        width: 100%;
     }
 }
