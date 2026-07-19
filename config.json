@@ -1,0 +1,10 @@
+{
+  "navbar": {
+    "home": true,
+    "packages": true,
+    "stay": true,
+    "surfTrips": false,
+    "about": true,
+    "store": true
+  }
+}

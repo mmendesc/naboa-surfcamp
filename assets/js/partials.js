@@ -45,6 +45,9 @@
 
   async function loadAll() {
     await Promise.all(partials.map(fetchAndInject));
+    if (window.ProjectConfig && typeof window.ProjectConfig.apply === 'function') {
+      await window.ProjectConfig.apply();
+    }
     // Run a minimal mobile menu setup so the side-menu content (which is copied from
     // the main nav) is available even if the theme JS ran before partial injection.
     try {
