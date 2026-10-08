@@ -18,7 +18,7 @@
       "Airport transfer",
       "Lunch and dinner"
     ],
-    "registrationUrl": "https://api.whatsapp.com/send?phone=558598465773&text=Hi%21%20I%20want%20to%20register%20for%20the%20Taiba%20Weekend%20Immersion.",
+    "registrationUrl": "https://api.whatsapp.com/send?phone=5585999641233&text=Hi%21%20I%20want%20to%20register%20for%20the%20Taiba%20Weekend%20Immersion.",
     "surferLevel": "Beginner to intermediate",
     "price": "R$ 690",
     "paymentMethods": [
@@ -46,7 +46,7 @@
       "Board rental",
       "Personal travel insurance"
     ],
-    "registrationUrl": "https://api.whatsapp.com/send?phone=558598465773&text=Hi%21%20I%20want%20to%20register%20for%20the%20Paracuru%20Point%20Break%20Trip.",
+    "registrationUrl": "https://api.whatsapp.com/send?phone=5585999641233&text=Hi%21%20I%20want%20to%20register%20for%20the%20Paracuru%20Point%20Break%20Trip.",
     "surferLevel": "Intermediate",
     "price": "R$ 420",
     "paymentMethods": [
@@ -74,7 +74,7 @@
       "Extra meals",
       "Personal equipment"
     ],
-    "registrationUrl": "https://api.whatsapp.com/send?phone=558598465773&text=Hi%21%20I%20want%20to%20register%20for%20the%20Icarai%20Advanced%20Surf%20Camp.",
+    "registrationUrl": "https://api.whatsapp.com/send?phone=5585999641233&text=Hi%21%20I%20want%20to%20register%20for%20the%20Icarai%20Advanced%20Surf%20Camp.",
     "surferLevel": "Intermediate to advanced",
     "price": "R$ 1,890",
     "paymentMethods": [

@@ -18,7 +18,7 @@
       "Traslado desde el aeropuerto",
       "Almuerzo y cena"
     ],
-    "registrationUrl": "https://api.whatsapp.com/send?phone=558598465773&text=Hola%21%20Quiero%20inscribirme%20en%20la%20Inmersion%20de%20Fin%20de%20Semana%20en%20Taiba.",
+    "registrationUrl": "https://api.whatsapp.com/send?phone=5585999641233&text=Hola%21%20Quiero%20inscribirme%20en%20la%20Inmersion%20de%20Fin%20de%20Semana%20en%20Taiba.",
     "surferLevel": "Principiante a intermedio",
     "price": "R$ 690",
     "paymentMethods": [
@@ -46,7 +46,7 @@
       "Alquiler de tabla",
       "Seguro de viaje personal"
     ],
-    "registrationUrl": "https://api.whatsapp.com/send?phone=558598465773&text=Hola%21%20Quiero%20inscribirme%20en%20el%20Trip%20Point%20Break%20Paracuru.",
+    "registrationUrl": "https://api.whatsapp.com/send?phone=5585999641233&text=Hola%21%20Quiero%20inscribirme%20en%20el%20Trip%20Point%20Break%20Paracuru.",
     "surferLevel": "Intermedio",
     "price": "R$ 420",
     "paymentMethods": [
@@ -74,7 +74,7 @@
       "Comidas extras",
       "Equipo personal"
     ],
-    "registrationUrl": "https://api.whatsapp.com/send?phone=558598465773&text=Hola%21%20Quiero%20inscribirme%20en%20el%20Surf%20Camp%20Avanzado%20en%20Icarai.",
+    "registrationUrl": "https://api.whatsapp.com/send?phone=5585999641233&text=Hola%21%20Quiero%20inscribirme%20en%20el%20Surf%20Camp%20Avanzado%20en%20Icarai.",
     "surferLevel": "Intermedio a avanzado",
     "price": "R$ 1.890",
     "paymentMethods": [
